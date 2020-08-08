@@ -1,5 +1,5 @@
 # Cantrip
-Welcome to Cantrip! A mobile DnD character management application that is being created and designed by full stack develoepr Leah Nonay. 
+Welcome to Cantrip! A mobile (Android OS) DnD character management application. Cantrip brings a new and vibrant way to manage your RPG characters, their inventory, and their combat abilities. This application is created and designed by full stack develoepr Leah Nonay. 
 
 # Features
 * Sleek 'Dark Mode' UI theme
