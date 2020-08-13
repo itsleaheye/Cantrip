@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cantrip.Views.CharacterCreatePage2"
+              BackgroundColor="#202328">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Abilities"
+                   TextColor="#ffffff"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="-70,0,0,0"
+                   FontFamily="Open Sans"
+                   LineHeight="27"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="steptwo.png"
+                   VerticalOptions="Center" 
+                   WidthRequest="95"
+                   HeightRequest="15"
+                   Margin="0"/>
+                <Frame BackgroundColor="#2A2E37"
+                       Margin="0,6,0,6"
+                       HeightRequest="70"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="0">
+                    <StackLayout>
+                        <Label x:Name="pointsRemain"
+                           Text="18"
+                           TextColor="#ffffff"
+                           FontSize="32"
+                           HorizontalOptions="Center"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="Text"
+                               Text="Points Remaining"
+                               TextColor="#53565D"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               FontFamily="Open Sans"
+                               Margin="0,-10,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="51"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Charisma"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="charVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Constitution"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="conVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Dexterity"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="dexVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Intelligence"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="intVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Strength"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="strVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Wisdom"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="wisVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Button Text="Roll Points"
+                        BackgroundColor="#202328"
+                        TextColor="#42C9C5"
+                        BorderColor="#42C9C5"
+                        BorderWidth="3"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="15,30,15,0"
+                        HeightRequest="56"/>
+                <Button Text="NEXT"
+                        Clicked="Button_Clicked"
+                        BackgroundColor="#5bc9cd"
+                        TextColor="#202328"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="15,9,15,15"
+                        HeightRequest="56"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

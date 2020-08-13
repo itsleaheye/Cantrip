@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cantrip.Views.CharCreatePage4"
+             BackgroundColor="#202328">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Abilities"
+                   TextColor="#ffffff"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="-70,0,0,0"
+                   FontFamily="Open Sans"
+                   LineHeight="27"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="stepfinal.png"
+                   VerticalOptions="Center" 
+                   WidthRequest="95"
+                   HeightRequest="15"
+                   Margin="0"/>
+                <Frame BackgroundColor="#2A2E37"
+                       Margin="0,6,0,6"
+                       HeightRequest="70"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="0">
+                    <StackLayout>
+                        <Label x:Name="hitPointsVal"
+                           Text="7"
+                           TextColor="#ffffff"
+                           FontSize="32"
+                           HorizontalOptions="Center"
+                           FontFamily="Open Sans"/>
+                        <Label
+                               Text="Hit Points"
+                               TextColor="#53565D"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               FontFamily="Open Sans"
+                               Margin="0,-10,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal"
+                             Padding="15,0,15,0"
+                             Margin="0,-25,0,0">
+                    <Button Text="Roll HP"
+                        BackgroundColor="#5bc9cd"
+                        TextColor="#202328"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="0,30,15,0"
+                        HeightRequest="60"
+                        WidthRequest="165"/>
+                    <Button Text="MAX HP"
+                        BackgroundColor="#202328"
+                        TextColor="#5bc9cd"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="0,27,0,0"
+                        HeightRequest="60"
+                        WidthRequest="165"
+                        BorderColor="#5bc9cd"
+                        BorderWidth="3"/>
+                </StackLayout>
+                <StackLayout Padding="15,0,15,0">
+                    <Label Text="Additional Notes"
+                        FontSize="20"
+                        TextColor="#ffffff"
+                        Margin="3,15,0,7"/>
+                    <Frame BackgroundColor="#202328"
+                           CornerRadius="8"
+                           BorderColor="#2A2E37"
+                           Padding="15,0,15,15">
+                        <Editor x:Name="entryName"
+                            Keyboard="Plain"
+                            Placeholder="Type your initial character notes in here..." 
+                            FontSize="18"
+                            PlaceholderColor="#53565D"
+                            TextColor="#53565D"
+                            HeightRequest="230"
+                            MaxLength="180"/>
+                    </Frame>
+                    <Button Text="Finish"
+                        Clicked="Button_Finish"
+                        BackgroundColor="#5bc9cd"
+                        TextColor="#202328"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="0,25,0,0"
+                        HeightRequest="56"/>
+                    <Button Text="Cancel Character"
+                        Clicked="Button_Cancel"
+                        BackgroundColor="#202328"
+                        TextColor="#ffffff"
+                        FontSize="20"
+                        Padding="15"
+                        CornerRadius="8"
+                        Margin="0,5,0,0"
+                        HeightRequest="56"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

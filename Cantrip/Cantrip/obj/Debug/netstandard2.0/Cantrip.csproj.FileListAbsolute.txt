@@ -1,0 +1,33 @@
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\bin\Debug\netstandard2.0\Cantrip.deps.json
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\bin\Debug\netstandard2.0\Cantrip.dll
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.AssemblyInfoInputs.cache
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.AssemblyInfo.cs
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.csproj.CoreCompileInputs.cache
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\bin\Debug\netstandard2.0\ref\Cantrip.dll
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\bin\Debug\netstandard2.0\Cantrip.pdb
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.dll
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\ref\Cantrip.dll
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.pdb
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharacterCreatePage.xaml.g.cs
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharacterCreatePage2.xaml.g.cs
+C:\Users\Leah Nonay\Documents\GitHub\Cantrip\Cantrip\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\MyCharactersPage.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\bin\Debug\netstandard2.0\Cantrip.deps.json
+C:\Users\Navi\source\repos\Cantrip\Cantrip\bin\Debug\netstandard2.0\Cantrip.dll
+C:\Users\Navi\source\repos\Cantrip\Cantrip\bin\Debug\netstandard2.0\ref\Cantrip.dll
+C:\Users\Navi\source\repos\Cantrip\Cantrip\bin\Debug\netstandard2.0\Cantrip.pdb
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharacterCreatePage.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharacterCreatePage2.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\MyCharactersPage.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.AssemblyInfoInputs.cache
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.AssemblyInfo.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.csproj.CoreCompileInputs.cache
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.dll
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\ref\Cantrip.dll
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.pdb
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.csprojAssemblyReference.cache

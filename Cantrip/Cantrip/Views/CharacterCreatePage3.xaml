@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cantrip.Views.CharacterCreatePage3"
+             BackgroundColor="#202328">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Abilities"
+                   TextColor="#ffffff"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="-70,0,0,0"
+                   FontFamily="Open Sans"
+                   LineHeight="27"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="stepthree.png"
+                   VerticalOptions="Center" 
+                   WidthRequest="95"
+                   HeightRequest="15"
+                   Margin="0"/>
+                <Frame BackgroundColor="#2A2E37"
+                       Margin="0,6,0,6"
+                       HeightRequest="70"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="0">
+                    <StackLayout>
+                        <Label x:Name="skillsRemain"
+                           Text="1"
+                           TextColor="#ffffff"
+                           FontSize="32"
+                           HorizontalOptions="Center"
+                           FontFamily="Open Sans"/>
+                        <Label
+                               Text="Skills Remaining"
+                               TextColor="#53565D"
+                               FontSize="16"
+                               HorizontalOptions="Center"
+                               FontFamily="Open Sans"
+                               Margin="0,-10,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="arcVal"
+                                  BackgroundColor="#2A2E37"
+                                  Color="#2A2E37"
+                                  HeightRequest="5"
+                                  WidthRequest="55">
+                            <!--<VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="States">
+                                    <VisualState x:Name="Normal">
+                                        <Setter Property="Color"
+                                                Value="#2A2E37"/>
+                                    </VisualState>
+                                    <VisualState x:Name="IsChecked">
+                                        <Setter Property="Color"
+                                                Value="#2A2E3742C9C5"/>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>-->
+                        </CheckBox>
+                        <Label Text="Arcana"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="6,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="History"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="hisVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Insight"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="insVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Investigation"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="invVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Medicine"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="medVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Nature"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="natVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Perception"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="perVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Religion"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="relVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,6,0,6"
+                       HeightRequest="40"
+                       HorizontalOptions="FillAndExpand"
+                       WidthRequest="300"
+                       Padding="25,0,25,0">
+                    <StackLayout>
+                        <Label Text="Sleight of Hand"
+                           TextColor="#ffffff"
+                           FontSize="20"
+                           HorizontalOptions="Start"
+                           FontFamily="Open Sans"/>
+                        <Label x:Name="sleightVal"
+                               Text="8"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="0,-32,40,0"/>
+                    </StackLayout>
+                </Frame>
+                <Button Text="NEXT"
+                        BackgroundColor="#5bc9cd"
+                        TextColor="#202328"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="15,9,15,15"
+                        HeightRequest="56"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Cantrip.Views.CharacterCreatePage"
+             BackgroundColor="#202328">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="New Character"
+                   TextColor="#ffffff"
+                   FontSize="20"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="-70,0,0,0"
+                   FontFamily="Open Sans"
+                   LineHeight="27"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Image Source="stepone.png"
+                   VerticalOptions="Center" 
+                   WidthRequest="95"
+                   HeightRequest="15"
+                   Margin="0,-15,0,0"/>
+
+                <Label Text="Name"
+                   FontSize="20"
+                   TextColor="#ffffff"
+                   Margin="3,7,0,-12"/>
+                <Entry x:Name="entryName"
+                Placeholder="Character Name..." 
+                FontSize="18"
+                PlaceholderColor="#53565D"
+                TextColor="#53565D"
+                MaxLength="15"/>
+
+                <Label Text="Race"
+                       FontSize="20"
+                       TextColor="#ffffff"
+                       Margin="3,7,0,-12"/>
+                <Picker x:Name="pickerRace"
+                        Title="Select..."
+                        TitleColor="#53565D"
+                        ItemsSource="{Binding raceID}"
+                        ItemDisplayBinding="{Binding raceID}"
+                        FontSize="18"
+                        TextColor="#53565D"
+                        BackgroundColor="#202328"/>
+
+                <Label Text="Background"
+                    FontSize="20"
+                    TextColor="#ffffff"
+                    Margin="3,7,0,-12"/>
+                <Picker x:Name="pickerBackground"
+                    Title="Select..."
+                    TitleColor="#53565D"
+                    ItemsSource="{Binding backgroundID}"
+                    ItemDisplayBinding="{Binding backgroundID}"
+                    FontSize="18"
+                    TextColor="#53565D"
+                    BackgroundColor="#202328" 
+                    FontFamily="Open Sans"/>
+
+                <Label Text="Starting Class"
+                    FontSize="20"
+                    TextColor="#ffffff"
+                    Margin="3,7,0,0"/>
+                <CarouselView x:Name="cardClass"
+                          ItemsSource="{Binding Class}"
+                          PeekAreaInsets="60"
+                          HeightRequest="380">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate >
+                            <Frame CornerRadius="8"
+                                   HorizontalOptions="CenterAndExpand"
+                                   BackgroundColor="#202328"
+                                   Padding="6,0,6,0">
+                                <Frame CornerRadius="8"
+                                   BorderColor="#2A2E37"
+                                   WidthRequest="169"
+                                   Padding="20,20,20,10"
+                                   BackgroundColor="#2A2E37"
+                                   Margin="25">
+                                    <StackLayout Margin="0,0,0,15">
+                                        <Label Text="{Binding classID}"
+                                   FontSize="18"
+                                   TextColor="#ffffff"
+                                   HorizontalOptions="CenterAndExpand"
+                                           Margin="0,0,0,15"/>
+                                        <Image Source="{Binding classIconSource}"
+                                   HeightRequest="150"
+                                   WidthRequest="150"
+                                   HorizontalOptions="Center"/>
+                                        <Label Text="{Binding description}"
+                                           FontSize="16"
+                                           TextColor="#C4C6C8"
+                                           Margin="0,15,0,0"
+                                           HorizontalOptions="CenterAndExpand"
+                                           HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <Button Text="NEXT"
+                        Clicked="Button_Clicked"
+                        BackgroundColor="#5bc9cd"
+                        TextColor="#202328"
+                        FontSize="20"
+                        Padding="15"
+                        FontAttributes="Bold"
+                        CornerRadius="8"
+                        Margin="0,5,0,0"
+                        HeightRequest="56"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
