@@ -13,3 +13,6 @@ Welcome to Cantrip! A mobile (Android OS) DnD character management application. 
 * Custom character images that users can upload, which will replace the base class icons
 * Report a bug feature
 * Animated splash screen featuring the Cantrip logo created by Leah Nonay, 2020
+
+# Current Bug
+* If you want to open up this app to play with it yourself as I complete development, be aware that you need to repath the initial launch page to the first stage of the character creator (From 'new MyCharactersPage()' to 'new CharacterCreatePage()'. You will need to create an instance of a character before reloading the app, as the original home page list view of characters, does not have any error handling for null tables. Due to this, you will not be able to launch the app unless you populate the table.
