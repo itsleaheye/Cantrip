@@ -54,19 +54,29 @@
                        HorizontalOptions="FillAndExpand"
                        WidthRequest="300"
                        Padding="25,0,25,0">
-                    <StackLayout>
+                    <StackLayout Orientation="Horizontal">
                         <Label Text="Charisma"
                            TextColor="#ffffff"
                            FontSize="20"
                            HorizontalOptions="Start"
                            FontFamily="Open Sans"/>
+                        <Button ClassId="BtnCharInc"
+                                Clicked="BtnIncreased_Clicked"
+                                Text="+"
+                                FontSize="24"
+                                TextColor="#202328"
+                                BackgroundColor="#53565D"
+                                CornerRadius="2"
+                                Padding="0"
+                                HeightRequest="24"
+                                WidthRequest="24"/>
                         <Label x:Name="charVal"
                                Text="8"
                                TextColor="#ffffff"
                                FontSize="20"
                                HorizontalOptions="End"
                                FontFamily="Open Sans"
-                               Margin="0,-32,40,0"/>
+                               Margin="0,0,15,0"/>
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"

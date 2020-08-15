@@ -11,8 +11,6 @@ namespace Cantrip.Models
         public int characterID { get; set; } //Primary key declaration
 
         public string Name { get; set; } //User sets the character name
-        public string Race { get; set; } //Foreign key to 'Race' objects, selected by the user 
-        public string Class { get; set; } //Foreign key to 'Class' objects, selected by the user 
         public string Background { get; set; }
         //Omitted public string Alignment { get; set; }
         public string Notes { get; set; } //String content
@@ -24,10 +22,18 @@ namespace Cantrip.Models
         public int Initiative { get; set; }
         public int WalkingSpeed { get; set; }
         public string footNotes { get; set; }
-
+        
+        //Skills
+        public int skillChar { get; set; }
+        public int skillCon { get; set; }
+        public int skillDex { get; set; }
+        public int skillInt { get; set; }
+        public int skillStr { get; set; }
+        public int skillWis { get; set; }
+        
         //Foriegn Keys
-        public string classID { get; set; }
-        public string raceID { get; set; }
+        public string classID { get; set; } //Foreign key to 'Class' objects, selected by the user 
+        public string raceID { get; set; } //Foreign key to 'Race' objects, selected by the user 
         public string backgroundID { get; set; }
 
         //Not Mapped property

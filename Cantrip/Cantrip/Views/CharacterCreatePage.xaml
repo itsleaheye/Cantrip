@@ -32,11 +32,11 @@
                    TextColor="#ffffff"
                    Margin="3,7,0,-12"/>
                 <Entry x:Name="entryName"
-                Placeholder="Character Name..." 
-                FontSize="18"
-                PlaceholderColor="#53565D"
-                TextColor="#53565D"
-                MaxLength="15"/>
+                    Placeholder="Character Name..." 
+                    FontSize="18"
+                    PlaceholderColor="#53565D"
+                    TextColor="#53565D"
+                    MaxLength="15"/>
 
                 <Label Text="Race"
                        FontSize="20"
