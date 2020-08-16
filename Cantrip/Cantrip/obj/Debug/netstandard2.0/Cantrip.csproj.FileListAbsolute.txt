@@ -31,3 +31,5 @@ C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.dll
 C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\ref\Cantrip.dll
 C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.pdb
 C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.csprojAssemblyReference.cache
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharacterCreatePage3.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharCreatePage4.xaml.g.cs

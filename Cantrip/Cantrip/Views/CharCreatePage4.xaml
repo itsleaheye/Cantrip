@@ -103,7 +103,6 @@
                         Margin="0,25,0,0"
                         HeightRequest="56"/>
                     <Button Text="Cancel Character"
-                        Clicked="Button_Cancel"
                         BackgroundColor="#202328"
                         TextColor="#ffffff"
                         FontSize="20"
