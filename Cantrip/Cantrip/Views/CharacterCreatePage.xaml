@@ -30,7 +30,7 @@
                 <Label Text="Name"
                    FontSize="20"
                    TextColor="#ffffff"
-                   Margin="3,7,0,-12"/>
+                   Margin="3,7,0,-7"/>
                 <Entry x:Name="entryName"
                     Placeholder="Character Name..." 
                     FontSize="18"
@@ -41,7 +41,7 @@
                 <Label Text="Race"
                        FontSize="20"
                        TextColor="#ffffff"
-                       Margin="3,7,0,-12"/>
+                       Margin="3,7,0,-7"/>
                 <Picker x:Name="pickerRace"
                         Title="Select..."
                         TitleColor="#53565D"
@@ -54,7 +54,7 @@
                 <Label Text="Background"
                     FontSize="20"
                     TextColor="#ffffff"
-                    Margin="3,7,0,-12"/>
+                    Margin="3,7,0,-7"/>
                 <Picker x:Name="pickerBackground"
                     Title="Select..."
                     TitleColor="#53565D"

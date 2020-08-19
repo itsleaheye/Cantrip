@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Cantrip.ViewModels;
 
 namespace Cantrip.Views
 {
@@ -158,7 +159,7 @@ namespace Cantrip.Views
                     }
                 }
                 //Dexterity Decrease
-                else if (btnName == "BtnStrInc")
+                else if (btnName == "BtnStrDec")
                 {
                     int currentStrValue = int.Parse(strVal.Text.ToString());
                     if (currentStrValue >= 9) //if Strength Value is above the min of '8', let the user decrease the number
@@ -170,7 +171,7 @@ namespace Cantrip.Views
                     }
                 }
                 //Wisdom Decrease
-                else if (btnName == "BtnWisInc")
+                else if (btnName == "BtnWisDec")
                 {
                     int currentWisValue = int.Parse(wisVal.Text.ToString());
                     if (currentWisValue >= 9) //if Dexterity Value is above the min of '8', let the user decrease the number
@@ -182,8 +183,52 @@ namespace Cantrip.Views
                     }
                 }        
         }
+        private void BtnBuy_Clicked(object sender, EventArgs e)
+        {
+            pointsRemain.Text = "27"; //Set title text - If user wants to buy points, set the value to pool of remaining points to 27
+            pointsText.Text = "Points Remaining"; //Caption Text
+            //Reset values to default
+            charVal.Text = "8";
+            conVal.Text = "8";
+            dexVal.Text = "8";
+            intVal.Text = "8";
+            strVal.Text = "8";
+            wisVal.Text = "8";
+
+            //Create event to trigger visibility=visible of increase and decrease buttons
+            charInc.IsVisible = true;
+            conInc.IsVisible = true;
+            dexInc.IsVisible = true;
+            intInc.IsVisible = true;
+            strInc.IsVisible = true;
+            wisInc.IsVisible = true;
+
+            charDec.IsVisible = true;
+            conDec.IsVisible = true;
+            dexDec.IsVisible = true;
+            intDec.IsVisible = true;
+            strDec.IsVisible = true;
+            wisDec.IsVisible = true;
+        }
         private void BtnRoll_Clicked(object sender, EventArgs e)
         {
+            pointsRemain.Text = "3d6"; //Set title text
+            pointsText.Text = "Rolling Points"; //Caption Text
+            //Create event to trigger visibility=off of increase and decrease buttons
+            charInc.IsVisible = false;
+            conInc.IsVisible = false;
+            dexInc.IsVisible = false;
+            intInc.IsVisible = false;
+            strInc.IsVisible = false;
+            wisInc.IsVisible = false;
+
+            charDec.IsVisible = false;
+            conDec.IsVisible = false;
+            dexDec.IsVisible = false;
+            intDec.IsVisible = false;
+            strDec.IsVisible = false;
+            wisDec.IsVisible = false;
+
             Random r = new Random();
             int diceRolled = 6;//1d6 rolled
             int charRolls = 0, conRolls = 0, dexRolls = 0, intRolls = 0, strRolls = 0, wisRolls = 0; //Rolls per stat. User rolls 3 times and adds them together
@@ -234,7 +279,7 @@ namespace Cantrip.Views
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            /*var db = new SQLiteConnection(dbPath); //Connect to local database 
+            var db = new SQLiteConnection(dbPath); //Connect to local database 
             Character character = new Character()
             {
                 characterID = selectedCharID,
@@ -245,8 +290,8 @@ namespace Cantrip.Views
                 skillStr = int.Parse(strVal.Text.ToString()),
                 skillWis = int.Parse(wisVal.Text.ToString())
             };
-            db.Update(character);*/
-            await Navigation.PushAsync(new CharacterCreatePage3()); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
+            db.Update(character);
+            await Navigation.PushAsync(new CharacterCreatePage3(character.characterID)); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
         }
     }
 }

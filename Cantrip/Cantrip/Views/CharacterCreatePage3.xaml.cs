@@ -13,7 +13,7 @@ namespace Cantrip.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CharacterCreatePage3 : ContentPage
     {
-        public CharacterCreatePage3()
+        public CharacterCreatePage3(int characterID)
         {
             this.Title = "Skills & Proficiency";
             InitializeComponent();
