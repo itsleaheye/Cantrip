@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[4.5.0.495, )"
             },
+            "sqlite-net": {
+              "target": "Package",
+              "version": "[1.6.292, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.7.335, )"
@@ -130,6 +134,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.5.0.495, )"
+            },
+            "sqlite-net": {
+              "target": "Package",
+              "version": "[1.6.292, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

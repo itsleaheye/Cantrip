@@ -35,7 +35,7 @@ namespace Cantrip.Views
 
             //Populate background picker from list
             List<Background> backgrounds = new List<Background>();
-            backgrounds.Add(new Background() { backgroundID = "Acolyte", });
+            backgrounds.Add(new Background() { backgroundID = "Acolyte" });
             backgrounds.Add(new Background() { backgroundID = "Charlatan" });
             backgrounds.Add(new Background() { backgroundID = "Criminal" });
             backgrounds.Add(new Background() { backgroundID = "Folk Hero" });

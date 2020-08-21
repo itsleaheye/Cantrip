@@ -49,7 +49,28 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="acroVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Acrobatics"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -57,7 +78,10 @@
                         <CheckBox x:Name="arcVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True"
+                                  VerticalOptions="Center">
                             <!--<VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="States">
                                     <VisualState x:Name="Normal">
@@ -80,7 +104,70 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="aniVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Animal Handling"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="athVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Athletics"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="decVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Deception"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -88,7 +175,9 @@
                         <CheckBox x:Name="hisVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
                         </CheckBox>
                         <Label Text="History"
                                TextColor="#ffffff"
@@ -99,7 +188,7 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -107,7 +196,9 @@
                         <CheckBox x:Name="insVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">>
                         </CheckBox>
                         <Label Text="Insight"
                                TextColor="#ffffff"
@@ -118,7 +209,28 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="intVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Intimidation"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -126,7 +238,9 @@
                         <CheckBox x:Name="invVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
                         </CheckBox>
                         <Label Text="Investigation"
                                TextColor="#ffffff"
@@ -137,7 +251,7 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -145,7 +259,9 @@
                         <CheckBox x:Name="medVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
                         </CheckBox>
                         <Label Text="Medicine"
                                TextColor="#ffffff"
@@ -156,7 +272,7 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -164,7 +280,9 @@
                         <CheckBox x:Name="natVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
                         </CheckBox>
                         <Label Text="Nature"
                                TextColor="#ffffff"
@@ -175,15 +293,17 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
                     <StackLayout Orientation="Horizontal">
-                        <CheckBox x:Name="perVal"
+                        <CheckBox x:Name="perceptVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
                         </CheckBox>
                         <Label Text="Perception"
                                TextColor="#ffffff"
@@ -194,7 +314,49 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="performVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Performance"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="persVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Persuasion"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -202,7 +364,9 @@
                         <CheckBox x:Name="relVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
                         </CheckBox>
                         <Label Text="Religion"
                                TextColor="#ffffff"
@@ -213,7 +377,7 @@
                     </StackLayout>
                 </Frame>
                 <Frame BackgroundColor="#202328"
-                       Margin="0,6,0,6"
+                       Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
@@ -221,9 +385,55 @@
                         <CheckBox x:Name="sleightVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
-                                  WidthRequest="24">
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True"
+                                  VerticalOptions="Center">
                         </CheckBox>
                         <Label Text="Sleight of Hand"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="steVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Stealth"
+                               TextColor="#ffffff"
+                               FontSize="20"
+                               HorizontalOptions="End"
+                               FontFamily="Open Sans"
+                               Margin="15,11,0,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#202328"
+                       Margin="0,0,0,6"
+                       HeightRequest="51"
+                       WidthRequest="300"
+                       Padding="15,0,15,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="survVal"
+                                  Color="#2A2E37"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  IsChecked="False"
+                                  IsEnabled="True">
+                        </CheckBox>
+                        <Label Text="Survival"
                                TextColor="#ffffff"
                                FontSize="20"
                                HorizontalOptions="End"

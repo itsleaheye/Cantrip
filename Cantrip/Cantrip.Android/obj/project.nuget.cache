@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QAe0NTGtWPJYp42/ZsCDHv8q5LSgvAS5b/IUsyYvWo+dyJuZD8COQSsK5Z26ZAzine/w/iZ/DOxd2HTXnRUS4g==",
+  "dgSpecHash": "xslzIA3Mjv63YFWxYIomfRrkB/6o5LxdMmSE3C8PZxT8LFNCpuswjZmksvYGE5OVav0fYupEk1OG6UMmU2F+Cw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Navi\\source\\repos\\Cantrip\\Cantrip.Android\\Cantrip.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Navi\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Navi\\.nuget\\packages\\sqlite-net\\1.6.292\\sqlite-net.1.6.292.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

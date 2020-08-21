@@ -80,6 +80,9 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
+      "sqlite-net/1.6.292": {
+        "type": "package"
+      },
       "sqlite-net-pcl/1.7.335": {
         "type": "package",
         "dependencies": {
@@ -794,6 +797,19 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "sqlite-net/1.6.292": {
+      "sha512": "/yXsrFYeUUYZiNELpicVG5fu0xJ0UdVgyZooqYws68NB9jLI5Ciievd96YOhtPdWY0O4F9l9XeE+446J/vnxiA==",
+      "type": "package",
+      "path": "sqlite-net/1.6.292",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/SQLite.cs",
+        "content/SQLiteAsync.cs",
+        "sqlite-net.1.6.292.nupkg.sha512",
+        "sqlite-net.nuspec"
       ]
     },
     "sqlite-net-pcl/1.7.335": {
@@ -2945,6 +2961,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "SQLiteNetExtensions >= 2.1.0",
+      "sqlite-net >= 1.6.292",
       "sqlite-net-pcl >= 1.7.335"
     ]
   },
@@ -2998,6 +3015,10 @@
           "SQLiteNetExtensions": {
             "target": "Package",
             "version": "[2.1.0, )"
+          },
+          "sqlite-net": {
+            "target": "Package",
+            "version": "[1.6.292, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

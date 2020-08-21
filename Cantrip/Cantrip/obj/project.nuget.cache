@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "HRaSk/rMeHX6TbDTKX5f9c9Czt9VsP5t1hSpEFFcDBBwUJn+9KEqZPSf/FY75+fJf9zhMU4WpuWm5Cv50pzdNg==",
+  "dgSpecHash": "EbV3b9b+GtDOMW90X3QG2P0MLuVKQ4vpGm1bWX8bYu0ywyCE/LxHmyIG5i9ijIM9tJPdsxmv5ufopAf6e17gEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Navi\\source\\repos\\Cantrip\\Cantrip\\Cantrip.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Navi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Navi\\.nuget\\packages\\sqlite-net\\1.6.292\\sqlite-net.1.6.292.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
     "C:\\Users\\Navi\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

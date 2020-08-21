@@ -34,11 +34,18 @@ namespace Cantrip.Views
                 if (btnName == "BtnCharInc")
                 {
                     int currentCharValue = int.Parse(charVal.Text.ToString());
-                    if (currentCharValue <= 14) //if Charisma Value is below the cap of '15', let the user increase the number
+                    if (currentCharValue <= 12 && currentCharValue <= 14) //if Charisma Value is below 12 and below the cap of 15 let the user increase the number
                     {
                         currentCharValue++;
                         charVal.Text = currentCharValue.ToString();
                         remainingPoints--;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentCharValue >= 13 && currentCharValue <= 14) //Skills cost 2 points after level 13
+                    {
+                        currentCharValue++;
+                        charVal.Text = currentCharValue.ToString();
+                        remainingPoints= remainingPoints-2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -46,11 +53,18 @@ namespace Cantrip.Views
                 else if (btnName == "BtnConInc")
                 {
                     int currentConValue = int.Parse(conVal.Text.ToString());
-                    if (currentConValue <= 14) //if Constitution Value is below the cap of '15', let the user increase the number
+                    if (currentConValue <= 12 && currentConValue <= 14) //if Constitution Value is below the cap of '15', let the user increase the number
                     {
                         currentConValue++;
                         conVal.Text = currentConValue.ToString();
                         remainingPoints--;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentConValue >= 13 && currentConValue <= 14) //Skills cost 2 points after level 13
+                    {
+                        currentConValue++;
+                        conVal.Text = currentConValue.ToString();
+                        remainingPoints = remainingPoints - 2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -58,11 +72,18 @@ namespace Cantrip.Views
                 else if (btnName == "BtnDexInc")
                 {
                     int currentDexValue = int.Parse(dexVal.Text.ToString());
-                    if (currentDexValue <= 14) //if Dexterity Value is below the cap of '15', let the user increase the number
+                    if (currentDexValue <= 12 && currentDexValue <= 14) //if Dexterity Value is below the cap of '15', let the user increase the number
                     {
                         currentDexValue++;
                         dexVal.Text = currentDexValue.ToString();
                         remainingPoints--;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentDexValue >= 13 && currentDexValue <= 14) //Skills cost 2 points after level 13
+                    {
+                        currentDexValue++;
+                        dexVal.Text = currentDexValue.ToString();
+                        remainingPoints = remainingPoints - 2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -70,11 +91,18 @@ namespace Cantrip.Views
                 else if (btnName == "BtnIntInc")
                 {
                     int currentIntValue = int.Parse(intVal.Text.ToString());
-                    if (currentIntValue <= 14) //if Intelligence Value is below the cap of '15', let the user increase the number
+                    if (currentIntValue >= 12 && currentIntValue <= 14) //if Intelligence Value is below the cap of '15', let the user increase the number
                     {
                         currentIntValue++;
                         intVal.Text = currentIntValue.ToString();
                         remainingPoints--;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentIntValue >= 13 && currentIntValue <= 14) //Skills cost 2 points after level 13
+                    {
+                        currentIntValue++;
+                        intVal.Text = currentIntValue.ToString();
+                        remainingPoints = remainingPoints - 2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -82,11 +110,18 @@ namespace Cantrip.Views
                 else if (btnName == "BtnStrInc")
                 {
                     int currentStrValue = int.Parse(strVal.Text.ToString());
-                    if (currentStrValue <= 14) //if Strength Value is below the cap of '15', let the user increase the number
+                    if (currentStrValue >= 12 && currentStrValue <= 14) //if Strength Value is below the cap of '15', let the user increase the number
                     {
                         currentStrValue++;
                         strVal.Text = currentStrValue.ToString();
                         remainingPoints--;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentStrValue >= 13 && currentStrValue <= 14) //Skills cost 2 points after level 13
+                    {
+                        currentStrValue++;
+                        strVal.Text = currentStrValue.ToString();
+                        remainingPoints = remainingPoints - 2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -94,11 +129,18 @@ namespace Cantrip.Views
                 else if (btnName == "BtnWisInc")
                 {
                     int currentWisValue = int.Parse(wisVal.Text.ToString());
-                    if (currentWisValue <= 14) //if Dexterity Value is below the cap of '15', let the user increase the number
+                    if (currentWisValue >= 12 && currentWisValue <= 14) //if Dexterity Value is below the cap of '15', let the user increase the number
                     {
                         currentWisValue++;
                         wisVal.Text = currentWisValue.ToString();
                         remainingPoints--;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentWisValue >= 13 && currentWisValue <= 14) //Skills cost 2 points after level 13
+                    {
+                        currentWisValue++;
+                        wisVal.Text = currentWisValue.ToString();
+                        remainingPoints = remainingPoints - 2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -114,11 +156,18 @@ namespace Cantrip.Views
                 if (btnName == "BtnCharDec")
                 {
                     int currentCharValue = int.Parse(charVal.Text.ToString());
-                    if (currentCharValue >= 9) //if Charisma Value is above the min of '8', let the user decrease the number
+                    if (currentCharValue >= 9 && currentCharValue <= 12) //if Charisma Value is above the min of '8', let the user decrease the number
                     {
                         currentCharValue--;
                         charVal.Text = currentCharValue.ToString();
                         remainingPoints++;
+                        pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentCharValue >= 13) //Skills cost 2 points after level 13
+                    {
+                        currentCharValue--;
+                        charVal.Text = currentCharValue.ToString();
+                        remainingPoints = remainingPoints + 2;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
@@ -126,62 +175,99 @@ namespace Cantrip.Views
                 else if (btnName == "BtnConDec")
                 {
                     int currentConValue = int.Parse(conVal.Text.ToString());
-                    if (currentConValue >= 9) //if Constitution Value is above the min of '8', let the user decrease the number
-                    {
+                    if (currentConValue >= 9 && currentConValue <= 12) //if Constitution Value is above the min of '8', let the user decrease the number
+                {
                         currentConValue--;
                         conVal.Text = currentConValue.ToString();
                         remainingPoints++;
                         pointsRemain.Text = remainingPoints.ToString();
+                    }
+                    else if (currentConValue >= 13) //Skills cost 2 points after level 13
+                    {
+                    currentConValue--;
+                    conVal.Text = currentConValue.ToString();
+                    remainingPoints = remainingPoints + 2;
+                    pointsRemain.Text = remainingPoints.ToString();
                     }
                 }
                 //Dexterity Decrease
                 else if (btnName == "BtnDexDec")
                 {
                     int currentDexValue = int.Parse(dexVal.Text.ToString());
-                    if (currentDexValue >= 9) //if Dexterity Value is above the min of '8', let the user decrease the number
+                    if (currentDexValue >= 9 && currentDexValue <= 12) //if Dexterity Value is above the min of '8', let the user decrease the number
                     {
                         currentDexValue--;
                         dexVal.Text = currentDexValue.ToString();
                         remainingPoints++;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
+                    else if (currentDexValue >= 13) //Skills cost 2 points after level 13
+                    {
+                        currentDexValue--;
+                        dexVal.Text = currentDexValue.ToString();
+                    remainingPoints = remainingPoints + 2;
+                    pointsRemain.Text = remainingPoints.ToString();
+                    }
                 }
                 //Intelligence Decrease
                 else if (btnName == "BtnIntDec")
                 {
                     int currentIntValue = int.Parse(intVal.Text.ToString());
-                    if (currentIntValue >= 9) //if Intelligence Value is above the min of '8', let the user decrease the number
+                    if (currentIntValue >= 9 && currentIntValue <= 12) //if Intelligence Value is above the min of '8', let the user decrease the number
                 {
                         currentIntValue--;
                         intVal.Text = currentIntValue.ToString();
                         remainingPoints++;
                         pointsRemain.Text = remainingPoints.ToString();
-                    }
                 }
+                else if (currentIntValue >= 13) //Skills cost 2 points after level 13
+                {
+                    currentIntValue--;
+                    intVal.Text = currentIntValue.ToString();
+                    remainingPoints = remainingPoints + 2;
+                    pointsRemain.Text = remainingPoints.ToString();
+                }
+            }
                 //Dexterity Decrease
                 else if (btnName == "BtnStrDec")
                 {
                     int currentStrValue = int.Parse(strVal.Text.ToString());
-                    if (currentStrValue >= 9) //if Strength Value is above the min of '8', let the user decrease the number
+                    if (currentStrValue >= 9 && currentStrValue <= 12) //if Strength Value is above the min of '8', let the user decrease the number
                     {
                         currentStrValue--;
                         strVal.Text = currentStrValue.ToString();
                         remainingPoints++;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
+
+                else if (currentStrValue >= 13) //Skills cost 2 points after level 13
+                {
+                    currentStrValue--;
+                    strVal.Text = currentStrValue.ToString();
+                    remainingPoints = remainingPoints + 2;
+                    pointsRemain.Text = remainingPoints.ToString();
                 }
+            }
                 //Wisdom Decrease
                 else if (btnName == "BtnWisDec")
                 {
                     int currentWisValue = int.Parse(wisVal.Text.ToString());
-                    if (currentWisValue >= 9) //if Dexterity Value is above the min of '8', let the user decrease the number
+                    if (currentWisValue >= 9 && currentWisValue <= 12) //if Dexterity Value is above the min of '8', let the user decrease the number
                     {
                         currentWisValue--;
                         wisVal.Text = currentWisValue.ToString();
                         remainingPoints++;
                         pointsRemain.Text = remainingPoints.ToString();
                     }
-                }        
+
+                else if (currentWisValue >= 13) //Skills cost 2 points after level 13
+                {
+                    currentWisValue--;
+                    wisVal.Text = currentWisValue.ToString();
+                    remainingPoints = remainingPoints + 2;
+                    pointsRemain.Text = remainingPoints.ToString();
+                }
+            }        
         }
         private void BtnBuy_Clicked(object sender, EventArgs e)
         {
@@ -291,7 +377,7 @@ namespace Cantrip.Views
                 skillWis = int.Parse(wisVal.Text.ToString())
             };
             db.Update(character);
-            await Navigation.PushAsync(new CharacterCreatePage3(character.characterID)); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
+            await Navigation.PushAsync(new CharacterCreatePage3(selectedCharID)); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
         }
     }
 }
