@@ -25,6 +25,7 @@
       "Cantrip.Web/1.0.0": {
         "dependencies": {
           "SQLiteNetExtensions": "2.1.0",
+          "sqlite-net": "1.6.292",
           "sqlite-net-pcl": "1.7.335",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
@@ -373,6 +374,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
+      "sqlite-net/1.6.292": {},
       "sqlite-net-pcl/1.7.335": {
         "dependencies": {
           "SQLitePCLRaw.bundle_green": "2.0.3"
@@ -2534,6 +2536,13 @@
       "sha512": "sha512-U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
+    },
+    "sqlite-net/1.6.292": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/yXsrFYeUUYZiNELpicVG5fu0xJ0UdVgyZooqYws68NB9jLI5Ciievd96YOhtPdWY0O4F9l9XeE+446J/vnxiA==",
+      "path": "sqlite-net/1.6.292",
+      "hashPath": "sqlite-net.1.6.292.nupkg.sha512"
     },
     "sqlite-net-pcl/1.7.335": {
       "type": "package",

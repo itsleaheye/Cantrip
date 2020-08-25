@@ -8,6 +8,7 @@ using System.IO;
 using Cantrip.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Cantrip.ViewModels;
 
 namespace Cantrip.Views
 {
@@ -19,6 +20,7 @@ namespace Cantrip.Views
         {
             this.Title = "New Character";
             InitializeComponent();
+            BindingContext = new ClassViewModel(); //Populate 'class' carousel view 
 
             //Populate race picker from list
             List<Race> races = new List<Race>();
@@ -53,7 +55,7 @@ namespace Cantrip.Views
             pickerBackground.ItemsSource = backgrounds;
 
             //Populate class objects
-            List<Class> classes = new List<Class>();
+            /*List<Class> classes = new List<Class>();
             classes.Add(new Class() { classID = "Barbarian", description = "A ferocious warrior who can enter a primitive battle rage.", classIconSource = "classBarbarianLogo.png" });
             classes.Add(new Class() { classID = "Bard", description = "A talented musician that weaves magic into their words.", classIconSource = "classBardLogo.png" });
             classes.Add(new Class() { classID = "Cleric", description = "A priest like champion that wields divine magic.", classIconSource = "classClericLogo.png" });
@@ -65,8 +67,9 @@ namespace Cantrip.Views
             classes.Add(new Class() { classID = "Rogue", description = "A stealthy and dexterous character that uses trickery.", classIconSource = "ClassRogueLogo.png" });
             classes.Add(new Class() { classID = "Sorcerer", description = "A spellcaster who inherited their magic as a gift.", classIconSource = "ClassSorcererLogo.png" });
             classes.Add(new Class() { classID = "Warlock", description = "A spellcaster who bargained with an extraplanar entity.", classIconSource = "ClassWarlockLogo.png" });
-            classes.Add(new Class() { classID = "Wizard", description = "A scholarly spellcaster who can manipulate reality.", classIconSource = "ClassWizardLogo.png" });
-            cardClass.ItemsSource = classes;
+            classes.Add(new Class() { classID = "Wizard", description = "A scholarly spellcaster who can manipulate reality.", classIconSource = "ClassWizardLogo.png" });*/
+
+            //cardClass.ItemsSource = classes;
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
@@ -96,7 +99,7 @@ namespace Cantrip.Views
                 };
 
                 db.Insert(character); //Insert new character table into the db
-                await Navigation.PushAsync(new CharacterCreatePage2(character.characterID)); //Navigate to step 2/4 of the character creation process and pass the 'characterID'
+                await Navigation.PushAsync(new CharacterCreatePage2(character.characterID, entryName.Text, selectedRace.ToString(), selectedClass.ToString(), selectedBg.ToString(), "1")); //Navigate to step 2/4 of the character creation process and pass the 'characterID'
             }
 
         }

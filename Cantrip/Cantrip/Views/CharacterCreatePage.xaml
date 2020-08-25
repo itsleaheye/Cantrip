@@ -70,7 +70,7 @@
                     TextColor="#ffffff"
                     Margin="3,7,0,0"/>
                 <CarouselView x:Name="cardClass"
-                          ItemsSource="{Binding Class}"
+                          ItemsSource="{Binding ClassList}"
                           PeekAreaInsets="60"
                           HeightRequest="380">
                     <CarouselView.ItemTemplate>

@@ -17,111 +17,104 @@ namespace Cantrip.Views
     public partial class CharacterCreatePage3 : ContentPage
     {
         string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
-        int _selectedCharID;
-        public CharacterCreatePage3(int selectedCharID)
+        public CharacterCreatePage3(Character _character)
         {
             this.Title = "Skills & Proficiency";
             InitializeComponent();
-            _selectedCharID = selectedCharID;
 
             //Find character by id that was passed
-            var db = new SQLiteConnection(dbPath); //Connect to local database 
-            var character = db.Table<Character>().Where(c => c.characterID == _selectedCharID); //Locate character by passed PK
+            /*var db = new SQLiteConnection(dbPath); //Connect to local database 
+            var character = db.Table<Character>().Where(c => c.characterID == _selectedCharID).Select(b => b.backgroundID); //Locate character by passed PK
             var background = db.Query<Character>("Select backgroundID from Character where characterID=?",_selectedCharID);
+            skillsRemain.Text = background.ToString();*/
 
+            skillsRemain.Text = _character.backgroundID; //Not Pulling BG value
             //Trigger certain checkboxes based on background
-            if (background.ToString() == "Acolyte")
+            if (_character.backgroundID == "Acolyte")
             {
                 insVal.IsChecked = true;
                 insVal.IsEnabled = false;
                 relVal.IsChecked = true;
                 relVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Charlatan")
+            else if (_character.backgroundID == "Charlatan")
             {
                 decVal.IsChecked = true;
                 decVal.IsEnabled = false;
                 sleightVal.IsChecked = true;
                 sleightVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Criminal")
+            else if (_character.backgroundID == "Criminal")
             {
                 decVal.IsChecked = true;
                 decVal.IsEnabled = false;
                 steVal.IsChecked = true;
                 steVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Folk Hero")
+            else if (_character.backgroundID == "Folk Hero")
             {
                 aniVal.IsChecked = true;
                 aniVal.IsEnabled = false;
                 survVal.IsChecked = true;
                 survVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Gladiator")
+            else if (_character.backgroundID == "Gladiator")
             {
                 acroVal.IsChecked = true;
                 acroVal.IsEnabled = false;
                 performVal.IsChecked = true;
                 performVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Guild Artisan")
+            else if (_character.backgroundID == "Guild Artisan")
             {
                 insVal.IsChecked = true;
                 insVal.IsEnabled = false;
                 persVal.IsChecked = true;
                 persVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Hermit")
+            else if (_character.backgroundID == "Hermit")
             {
                 medVal.IsChecked = true;
                 medVal.IsEnabled = false;
                 relVal.IsChecked = true;
                 relVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Hermit")
-            {
-                medVal.IsChecked = true;
-                medVal.IsEnabled = false;
-                relVal.IsChecked = true;
-                relVal.IsEnabled = false;
-            }
-            else if (background.ToString() == "Knight" || background.ToString() == "Noble")
+            else if (_character.backgroundID == "Knight" || _character.backgroundID == "Noble")
             {
                 hisVal.IsChecked = true;
                 hisVal.IsEnabled = false;
                 persVal.IsChecked = true;
                 persVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Outlander")
+            else if (_character.backgroundID == "Outlander")
             {
                 athVal.IsChecked = true;
                 athVal.IsEnabled = false;
                 survVal.IsChecked = true;
                 survVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Sage")
+            else if (_character.backgroundID == "Sage")
             {
                 arcVal.IsChecked = true;
                 arcVal.IsEnabled = false;
                 hisVal.IsChecked = true;
                 hisVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Sailor")
+            else if (_character.backgroundID == "Sailor")
             {
                 athVal.IsChecked = true;
                 athVal.IsEnabled = false;
                 perceptVal.IsChecked = true;
                 perceptVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Soldier")
+            else if (_character.backgroundID == "Soldier")
             {
                 athVal.IsChecked = true;
                 athVal.IsEnabled = false;
                 intVal.IsChecked = true;
                 intVal.IsEnabled = false;
             }
-            else if (background.ToString() == "Urchin")
+            else if (_character.backgroundID == "Urchin")
             {
                 sleightVal.IsChecked = true;
                 sleightVal.IsEnabled = false;

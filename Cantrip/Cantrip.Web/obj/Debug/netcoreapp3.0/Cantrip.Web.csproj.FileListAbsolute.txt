@@ -76,3 +76,5 @@ C:\Users\Navi\source\repos\Cantrip\Cantrip.Web\obj\Debug\netcoreapp3.0\staticweb
 C:\Users\Navi\source\repos\Cantrip\Cantrip.Web\obj\Debug\netcoreapp3.0\Cantrip.Web.dll
 C:\Users\Navi\source\repos\Cantrip\Cantrip.Web\obj\Debug\netcoreapp3.0\Cantrip.Web.pdb
 C:\Users\Navi\source\repos\Cantrip\Cantrip.Web\obj\Debug\netcoreapp3.0\Cantrip.Web.genruntimeconfig.cache
+C:\Users\Navi\source\repos\Cantrip\Cantrip.Web\obj\Debug\netcoreapp3.0\Cantrip.Web.csproj.CoreCompileInputs.cache
+C:\Users\Navi\source\repos\Cantrip\Cantrip.Web\obj\Debug\netcoreapp3.0\Cantrip.Web.MvcApplicationPartsAssemblyInfo.cache

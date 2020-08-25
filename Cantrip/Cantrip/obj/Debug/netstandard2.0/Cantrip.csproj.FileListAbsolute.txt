@@ -33,3 +33,6 @@ C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\Charac
 C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharCreatePage4.xaml.g.cs
 C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Cantrip.csproj.CoreCompileInputs.cache
 C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CharacterPage.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\CombatViewPage.xaml.g.cs
+C:\Users\Navi\source\repos\Cantrip\Cantrip\obj\Debug\netstandard2.0\Views\InventoryViewPage.xaml.g.cs

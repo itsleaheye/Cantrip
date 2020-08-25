@@ -11,7 +11,6 @@ namespace Cantrip.Models
         public int characterID { get; set; } //Primary key declaration
 
         public string Name { get; set; } //User sets the character name
-        public string Background { get; set; }
         //Omitted public string Alignment { get; set; }
         public string Notes { get; set; } //String content
         //public List Skills { get; set; }

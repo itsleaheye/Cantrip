@@ -25,9 +25,19 @@
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Padding="15" Spacing="10">
+            <Label x:Name="emptyList"
+                   Text="No Characters Found"
+                   HorizontalOptions="Center"
+                   VerticalOptions="FillAndExpand"
+                   TextColor="#ffffff"
+                   FontSize="16"
+                   FontAttributes="Italic"
+                   Margin="0,250,0,0"
+                   IsVisible="false"/>
             <ListView x:Name="charListView" 
                       HasUnevenRows="True" 
-                      SeparatorVisibility="None">
+                      SeparatorVisibility="None"
+                      IsPullToRefreshEnabled="true">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -46,7 +56,7 @@
                                         <StackLayout Orientation="Horizontal" 
                                          BackgroundColor="#2A2E37" 
                                          Margin="0,3,0,6">
-                                            <Image Source="{Binding classIcon}"
+                                            <Image Source="ClassRangerLogo.png"
                                                 HeightRequest="60"
                                                 WidthRequest="60"
                                                 Margin="5,0,15,0"/>

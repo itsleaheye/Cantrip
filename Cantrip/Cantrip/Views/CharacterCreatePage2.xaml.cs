@@ -16,12 +16,18 @@ namespace Cantrip.Views
     public partial class CharacterCreatePage2 : ContentPage
     {
         string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
-        int selectedCharID;
-        public CharacterCreatePage2(int characterID)
+        string _charName, _charRace, _charClass, _charBg, _charLvl;
+        int _charID;
+        public CharacterCreatePage2(int characterID, string charName, string charRace, string charClass, string charBg, string charLvl)
         {
             this.Title = "Abilities";
             InitializeComponent();
-            selectedCharID = characterID;
+            _charID = characterID;
+            _charName = charName;
+            _charClass = charClass;
+            _charRace = charRace;
+            _charBg = charBg;
+            _charLvl = charLvl;
         }
         private void BtnIncreased_Clicked(object sender, EventArgs e)
         {
@@ -366,9 +372,17 @@ namespace Cantrip.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             var db = new SQLiteConnection(dbPath); //Connect to local database 
-            Character character = new Character()
+            Character character = new Character() //This is deleting the chars values for some reason
             {
-                characterID = selectedCharID,
+                //Passed values
+                characterID = _charID,
+                Name = _charName,
+                classID = _charClass,
+                raceID = _charRace,
+                backgroundID = _charBg,
+                TotalLevel = _charLvl,
+
+                //New values
                 skillChar = int.Parse(charVal.Text.ToString()),
                 skillCon = int.Parse(conVal.Text.ToString()),
                 skillDex = int.Parse(dexVal.Text.ToString()),
@@ -377,7 +391,7 @@ namespace Cantrip.Views
                 skillWis = int.Parse(wisVal.Text.ToString())
             };
             db.Update(character);
-            await Navigation.PushAsync(new CharacterCreatePage3(selectedCharID)); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
+            await Navigation.PushAsync(new CharacterCreatePage3(character)); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
         }
     }
 }

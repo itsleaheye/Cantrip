@@ -13,13 +13,14 @@ namespace Cantrip.Models
 
         public string classIconSource { get; set; }
         public string description { get; set; }
-        /*public string hitDie { get; set; }
+        public string hitDie { get; set; }
         public string saves { get; set; }
 
         public string armor { get; set; }
         public string weapon { get; set; }
         public string tool { get; set; }
-        public string language { get; set; }*/
+        public string language { get; set; }
+
 
         public override string ToString()
         {
