@@ -18,7 +18,7 @@
                    LineHeight="27"/>
         </StackLayout>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
+    <ContentPage.Content >
         <ScrollView>
             <StackLayout>
                 <Image Source="stepthree.png"
@@ -48,7 +48,9 @@
                                Margin="0,-10,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="acroFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -69,7 +71,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="arcFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -103,7 +107,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="aniFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -124,7 +130,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="athFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -145,7 +153,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="decFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -166,7 +176,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="hisFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -187,7 +199,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="insFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -208,13 +222,15 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="intimFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
                        Padding="15,0,15,0">
                     <StackLayout Orientation="Horizontal">
-                        <CheckBox x:Name="intVal"
+                        <CheckBox x:Name="intimVal"
                                   Color="#2A2E37"
                                   HeightRequest="24"
                                   WidthRequest="24"
@@ -229,7 +245,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="invFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -250,7 +268,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="medFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -271,7 +291,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="natFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -292,7 +314,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="perceptFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -313,7 +337,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="performFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -334,7 +360,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame x:Name="persFrame"
+                       IsVisible="false"
+                       BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -355,7 +383,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="relFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -376,7 +406,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="sleightFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -399,7 +431,9 @@
                                VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="steFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"
@@ -420,7 +454,9 @@
                                Margin="15,11,0,0"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="#202328"
+                <Frame  x:Name="survFrame"
+                       IsVisible="false"
+                    BackgroundColor="#202328"
                        Margin="0,0,0,6"
                        HeightRequest="51"
                        WidthRequest="300"

@@ -17,12 +17,10 @@ namespace Cantrip.Views
     {
         string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
         string _charName, _charRace, _charClass, _charBg, _charLvl;
-        int _charID;
-        public CharacterCreatePage2(int characterID, string charName, string charRace, string charClass, string charBg, string charLvl)
+        public CharacterCreatePage2(string charName, string charRace, string charClass, string charBg, string charLvl)
         {
             this.Title = "Abilities";
             InitializeComponent();
-            _charID = characterID;
             _charName = charName;
             _charClass = charClass;
             _charRace = charRace;
@@ -97,7 +95,7 @@ namespace Cantrip.Views
                 else if (btnName == "BtnIntInc")
                 {
                     int currentIntValue = int.Parse(intVal.Text.ToString());
-                    if (currentIntValue >= 12 && currentIntValue <= 14) //if Intelligence Value is below the cap of '15', let the user increase the number
+                    if (currentIntValue <= 12 && currentIntValue <= 14) //if Intelligence Value is below the cap of '15', let the user increase the number
                     {
                         currentIntValue++;
                         intVal.Text = currentIntValue.ToString();
@@ -116,7 +114,7 @@ namespace Cantrip.Views
                 else if (btnName == "BtnStrInc")
                 {
                     int currentStrValue = int.Parse(strVal.Text.ToString());
-                    if (currentStrValue >= 12 && currentStrValue <= 14) //if Strength Value is below the cap of '15', let the user increase the number
+                    if (currentStrValue <= 12 && currentStrValue <= 14) //if Strength Value is below the cap of '15', let the user increase the number
                     {
                         currentStrValue++;
                         strVal.Text = currentStrValue.ToString();
@@ -135,7 +133,7 @@ namespace Cantrip.Views
                 else if (btnName == "BtnWisInc")
                 {
                     int currentWisValue = int.Parse(wisVal.Text.ToString());
-                    if (currentWisValue >= 12 && currentWisValue <= 14) //if Dexterity Value is below the cap of '15', let the user increase the number
+                    if (currentWisValue <= 12 && currentWisValue <= 14) //if Dexterity Value is below the cap of '15', let the user increase the number
                     {
                         currentWisValue++;
                         wisVal.Text = currentWisValue.ToString();
@@ -371,8 +369,22 @@ namespace Cantrip.Views
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            var db = new SQLiteConnection(dbPath); //Connect to local database 
-            Character character = new Character() //This is deleting the chars values for some reason
+            //Ensure points have been filled/rolled/bought
+            if (int.Parse(pointsRemain.Text.ToString()) >= 1 && pointsRemain.Text != "3d6") //If the user has not spent all their points, and they are in the 'point rolling' mode, display an alert
+            {
+                await DisplayAlert("Incomplete", "Please ensure you have spent all your points, or rolled them", "OK");
+            }
+            else
+            {
+                await Navigation.PushAsync(new CharacterCreatePage3(_charName, _charRace, _charClass, _charBg, _charLvl, charVal.Text.ToString(), conVal.Text.ToString(), dexVal.Text.ToString(), intVal.Text.ToString(), strVal.Text.ToString(), wisVal.Text.ToString())); //Navigate to step 3/4 of the character creation process
+            }
+            /*var db = new SQLiteConnection(dbPath); //Connect to local database 
+            db.CreateTable<Character>(); //Create new instance of a character
+            
+            var maxPK = db.Table<Character>().OrderByDescending(c => c.characterID).FirstOrDefault();
+            int _charID = (maxPK == null ? 1 : maxPK.characterID + 1);
+            
+            Character character = new Character() 
             {
                 //Passed values
                 characterID = _charID,
@@ -390,8 +402,8 @@ namespace Cantrip.Views
                 skillStr = int.Parse(strVal.Text.ToString()),
                 skillWis = int.Parse(wisVal.Text.ToString())
             };
-            db.Update(character);
-            await Navigation.PushAsync(new CharacterCreatePage3(character)); //Navigate to step 3/4 of the character creation process and pass the 'characterID' parameter
+            db.Insert(character); //Insert new character table into the db*/
+            
         }
     }
 }

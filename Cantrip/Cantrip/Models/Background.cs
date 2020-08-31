@@ -11,5 +11,10 @@ namespace Cantrip.Models
         public string backgroundID { get; set; } //Primary key declaration
 
         public string language { get; set; } //language
+
+        public override string ToString()
+        {
+            return this.backgroundID;
+        }
     }
 }

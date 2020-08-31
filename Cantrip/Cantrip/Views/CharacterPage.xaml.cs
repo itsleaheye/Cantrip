@@ -79,7 +79,8 @@ namespace Cantrip.Views
             charNameLabel.Text = _character.Name;
             charRaceLabel.Text = _character.raceID;
             charClassLabel.Text = _character.classID;
-            
+            charBGLabel.Text = _character.backgroundID;
+
 
             /*var db = new SQLiteConnection(dbPath); //Connect to local database 
             var _characterName = db.Table<Character>().Where(c => c.characterID == _selectedCharID).Select(b => b.Name); //Locate character name

@@ -40,7 +40,7 @@
                         <Label x:Name="charNameLabel"
                            Text="Name Here"
                            FontSize="20"
-                           TextColor="#ffffff"
+                           TextColor="#F4F4F4"
                            Margin="6,45,0,-7"/>
                         <Label x:Name="charRaceLabel"
                            Text="Race Here"
@@ -50,9 +50,57 @@
                         <Label x:Name="charClassLabel"
                            Text="Class Here"
                            FontSize="16"
-                           TextColor="#ffffff"
+                           TextColor="#F4F4F4"
                            Margin="6,0,0,-7"/>
                     </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand">
+                    <Frame CornerRadius="8"
+                           BorderColor="#2A2E37"
+                           BackgroundColor="#2A2E37"
+                           Padding="10"
+                           HeightRequest="68"
+                           WidthRequest="75"
+                           Margin="0,0,15,0">
+                        <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="Center">
+                            <Label x:Name="charHealthLabel"
+                                    Text="Armor"
+                                    FontSize="20"
+                                    TextColor="#53565D"/>
+                            <Label x:Name="charDiceLabel"
+                                    Text="16"
+                                    FontSize="20"
+                                    TextColor="#F4F4F4"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="8"
+                           BorderColor="#2A2E37"
+                           BackgroundColor="#2A2E37"
+                           Padding="10"
+                           HeightRequest="68"
+                           WidthRequest="75"
+                           Margin="0,0,15,0">
+                        <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="Center">
+                            <Label x:Name="charBGLabel"
+                                    Text="Armor"
+                                    FontSize="20"
+                                    TextColor="#53565D"/>
+                            <Label x:Name="charBackLabel"
+                                    Text="16"
+                                    FontSize="20"
+                                    TextColor="#F4F4F4"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="8"
+                           BorderColor="#2A2E37"
+                           BackgroundColor="#2A2E37"
+                           Padding="10"
+                           HeightRequest="68"
+                           WidthRequest="75">
+                    </Frame>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

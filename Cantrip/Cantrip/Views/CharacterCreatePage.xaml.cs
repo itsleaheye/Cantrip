@@ -53,23 +53,6 @@ namespace Cantrip.Views
             backgrounds.Add(new Background() { backgroundID = "Soldier" });
             backgrounds.Add(new Background() { backgroundID = "Urchin" });
             pickerBackground.ItemsSource = backgrounds;
-
-            //Populate class objects
-            /*List<Class> classes = new List<Class>();
-            classes.Add(new Class() { classID = "Barbarian", description = "A ferocious warrior who can enter a primitive battle rage.", classIconSource = "classBarbarianLogo.png" });
-            classes.Add(new Class() { classID = "Bard", description = "A talented musician that weaves magic into their words.", classIconSource = "classBardLogo.png" });
-            classes.Add(new Class() { classID = "Cleric", description = "A priest like champion that wields divine magic.", classIconSource = "classClericLogo.png" });
-            classes.Add(new Class() { classID = "Druid", description = "A wielder of nature-themed magics.", classIconSource = "classDruidLogo.png" });
-            classes.Add(new Class() { classID = "Fighter", description = "A versatile warrior utilizing weapons, strategy and tactics.", classIconSource = "ClassFighter2Logo.png" });
-            classes.Add(new Class() { classID = "Monk", description = "A mystic and master of the martial arts.", classIconSource = "ClassMonkLogo.png" });
-            classes.Add(new Class() { classID = "Paladin", description = "A holy warrior that can cast divine magic.", classIconSource = "ClassPaladinLogo.png" });
-            classes.Add(new Class() { classID = "Ranger", description = "A protecter uses nature magic and weapons in combat.", classIconSource = "ClassRangerLogo.png" });
-            classes.Add(new Class() { classID = "Rogue", description = "A stealthy and dexterous character that uses trickery.", classIconSource = "ClassRogueLogo.png" });
-            classes.Add(new Class() { classID = "Sorcerer", description = "A spellcaster who inherited their magic as a gift.", classIconSource = "ClassSorcererLogo.png" });
-            classes.Add(new Class() { classID = "Warlock", description = "A spellcaster who bargained with an extraplanar entity.", classIconSource = "ClassWarlockLogo.png" });
-            classes.Add(new Class() { classID = "Wizard", description = "A scholarly spellcaster who can manipulate reality.", classIconSource = "ClassWizardLogo.png" });*/
-
-            //cardClass.ItemsSource = classes;
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
@@ -81,14 +64,15 @@ namespace Cantrip.Views
             else
             {
                 var db = new SQLiteConnection(dbPath); //Connect to local database  
-                db.CreateTable<Character>(); //Create new instance of a character
-                var maxPK = db.Table<Character>().OrderByDescending(c => c.characterID).FirstOrDefault();
+                /*db.CreateTable<Character>(); //Create new instance of a character
+                var maxPK = db.Table<Character>().OrderByDescending(c => c.characterID).FirstOrDefault();*/
 
                 var selectedRace = pickerRace.SelectedItem;
                 var selectedClass = cardClass.CurrentItem;
-                var selectedBg = pickerBackground.SelectedItem;
+                var selectedBg = pickerBackground.SelectedItem; 
+                //int characterID = (maxPK == null ? 1 : maxPK.characterID + 1);
 
-                Character character = new Character()
+                /*Character character = new Character()
                 {
                     characterID = (maxPK == null ? 1 : maxPK.characterID + 1),
                     Name = entryName.Text,
@@ -96,10 +80,10 @@ namespace Cantrip.Views
                     classID = selectedClass.ToString(),
                     backgroundID = selectedBg.ToString(),
                     TotalLevel = "1" //Characters start at lvl 1
-                };
+                };*/
 
-                db.Insert(character); //Insert new character table into the db
-                await Navigation.PushAsync(new CharacterCreatePage2(character.characterID, entryName.Text, selectedRace.ToString(), selectedClass.ToString(), selectedBg.ToString(), "1")); //Navigate to step 2/4 of the character creation process and pass the 'characterID'
+                //db.Insert(character); Insert new character table into the db
+                await Navigation.PushAsync(new CharacterCreatePage2(entryName.Text, selectedRace.ToString(), selectedClass.ToString(), selectedBg.ToString(), "1")); //Navigate to step 2/4 of the character creation process and pass the 'characterID'
             }
 
         }
