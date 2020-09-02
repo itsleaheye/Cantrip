@@ -18,111 +18,181 @@ namespace Cantrip.Views
     public partial class CharacterCreatePage3 : ContentPage
     {
         string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
-        string _charClass, _charBg;
+        string _charName, _charClass, _charBg, _charRace, _charLvl, _charVal, _conVal, _dexVal, _intVal, _strVal, _wisVal;
+        int pointPool;
         public CharacterCreatePage3(string charName, string charRace, string charClass, string charBg, string charLvl, string charVal, string conVal, string dexVal, string intVal, string strVal, string wisVal)
         {
             this.Title = "Skills & Proficiency";
             InitializeComponent();
+            _charName = charName;
             _charClass = charClass;
             _charBg = charBg;
+            _charRace = charRace;
+            _charLvl = charLvl;
+            _charVal = charVal;
+            _conVal = conVal;
+            _dexVal = dexVal;
+            _intVal = intVal;
+            _strVal = strVal;
+            _wisVal = wisVal;
+            pointPool = 0;
+
             //In the future could possibly bind .IsVisible in XAMl to class value
 
             //Trigger certain visibilities based on class
-            /*if (pointPool == 0)
+            if (_charClass == "Bard")
             {
-                if (_charClass == "Bard")
-                {
-                    pointPool = 3;
+                pointPool = 3;
 
-                    acroFrame.IsVisible = true;
-                    aniFrame.IsVisible = true;
-                    arcFrame.IsVisible = true;
-                    athFrame.IsVisible = true;
-                    decFrame.IsVisible = true;
-                    hisFrame.IsVisible = true;
-                    insFrame.IsVisible = true;
-                    intimFrame.IsVisible = true;
-                    medFrame.IsVisible = true;
-                    natFrame.IsVisible = true;
-                    perceptFrame.IsVisible = true;
-                    performFrame.IsVisible = true;
-                    persFrame.IsVisible = true;
-                    relFrame.IsVisible = true;
-                    sleightFrame.IsVisible = true;
-                    steFrame.IsVisible = true;
-                    survFrame.IsVisible = true;
-                }
-                else if (_charClass == "Barbarian")
-                {
-                    pointPool = 2;
-
-                    aniFrame.IsVisible = true;
-                    athFrame.IsVisible = true;
-                    intimFrame.IsVisible = true;
-                    natFrame.IsVisible = true;
-                    perceptFrame.IsVisible = true;
-                    survFrame.IsVisible = true;
-                }
-                else if (charClass == "Cleric")
-                {
-                    pointPool = 2;
-
-                    hisFrame.IsVisible = true;
-                    insFrame.IsVisible = true;
-                    medFrame.IsVisible = true;
-                    persFrame.IsVisible = true;
-                    relFrame.IsVisible = true;
-                }
-                else if (charClass == "Druid")
-                {
-                    pointPool = 2;
-
-                    arcFrame.IsVisible = true;
-                    aniFrame.IsVisible = true;
-                    insFrame.IsVisible = true;
-                    medFrame.IsVisible = true;
-                    natFrame.IsVisible = true;
-                    perceptFrame.IsVisible = true;
-                    relFrame.IsVisible = true;
-                    survFrame.IsVisible = true;
-                }
-                else if (charClass == "Fighter")
-                {
-                    charImgPath = "ClassFighter2Logo.png";
-                }
-                else if (charClass == "Monk")
-                {
-                    charImgPath = "ClassMonkLogo.png";
-                }
-                else if (charClass == "Paladin")
-                {
-                    charImgPath = "ClassPaladinLogo.png";
-                }
-                else if (charClass == "Ranger")
-                {
-                    charImgPath = "ClassRangerLogo.png";
-                }
-                else if (charClass == "Rogue")
-                {
-                    charImgPath = "ClassMonkLogo.png";
-                }
-                else if (charClass == "Sorcerer")
-                {
-                    charImgPath = "ClassSorcererLogo.png";
-                }
-                else if (charClass == "Warlock")
-                {
-                    charImgPath = "ClassWarlockLogo.png";
-                }
-                else if (charClass == "Wizard")
-                {
-                    charImgPath = "ClassWizardLogo.png";
-                }
-            skillsRemain.Text = pointPool.ToString();
+                acroFrame.IsVisible = true;
+                aniFrame.IsVisible = true;
+                arcFrame.IsVisible = true;
+                athFrame.IsVisible = true;
+                decFrame.IsVisible = true;
+                hisFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                intimFrame.IsVisible = true;
+                medFrame.IsVisible = true;
+                natFrame.IsVisible = true;
+                perceptFrame.IsVisible = true;
+                performFrame.IsVisible = true;
+                persFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+                sleightFrame.IsVisible = true;
+                steFrame.IsVisible = true;
+                survFrame.IsVisible = true;
             }
-            else //Now that abilities have been activated, trigger certain checkboxes based on background
-            {*/
-                if (_charBg == "Acolyte")
+            else if (_charClass == "Barbarian")
+            {
+                pointPool = 2;
+
+                aniFrame.IsVisible = true;
+                athFrame.IsVisible = true;
+                intimFrame.IsVisible = true;
+                natFrame.IsVisible = true;
+                perceptFrame.IsVisible = true;
+                survFrame.IsVisible = true;
+            }
+            else if (charClass == "Cleric")
+            {
+                pointPool = 2;
+
+                hisFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                medFrame.IsVisible = true;
+                persFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+            }
+            else if (charClass == "Druid")
+            {
+                pointPool = 2;
+
+                arcFrame.IsVisible = true;
+                aniFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                medFrame.IsVisible = true;
+                natFrame.IsVisible = true;
+                perceptFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+                survFrame.IsVisible = true;
+            }
+            else if (charClass == "Fighter")
+            {
+                pointPool = 2;
+
+                acroFrame.IsVisible = true;
+                aniFrame.IsVisible = true;
+                athFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                intimFrame.IsVisible = true;
+                perceptFrame.IsVisible = true;
+                survFrame.IsVisible = true;
+            }
+            else if (charClass == "Monk")
+            {
+                pointPool = 2;
+
+                acroFrame.IsVisible = true;
+                athFrame.IsVisible = true;
+                hisFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+                steFrame.IsVisible = true;
+            }
+            else if (charClass == "Paladin")
+            {
+                pointPool = 2;
+
+                athFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                intimFrame.IsVisible = true;
+                persFrame.IsVisible = true;
+                relFrame.IsVisible = true;    
+            }
+            else if (charClass == "Ranger")
+            {
+                pointPool = 3;
+
+                aniFrame.IsVisible = true;
+                athFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                invFrame.IsVisible = true;
+                perceptFrame.IsVisible = true;
+                steFrame.IsVisible = true;
+                survFrame.IsVisible = true;
+            }
+            else if (charClass == "Rogue")
+            {
+                pointPool = 4;
+
+                acroFrame.IsVisible = true;
+                athFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                invFrame.IsVisible = true;
+                perceptFrame.IsVisible = true;
+                performFrame.IsVisible = true;
+                persFrame.IsVisible = true;
+                sleightFrame.IsVisible = true;
+                steFrame.IsVisible = true;
+            }
+            else if (charClass == "Sorcerer")
+            {
+                pointPool = 2;
+
+                arcFrame.IsVisible = true;
+                decFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                intimFrame.IsVisible = true;
+                persFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+            }
+            else if (charClass == "Warlock")
+            {
+                pointPool = 2;
+
+                arcFrame.IsVisible = true;
+                decFrame.IsVisible = true;
+                hisFrame.IsVisible = true;
+                intimFrame.IsVisible = true;
+                invFrame.IsVisible = true;
+                natFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+            }
+            else if (charClass == "Wizard")
+            {
+                pointPool = 2;
+
+                arcFrame.IsVisible = true;
+                hisFrame.IsVisible = true;
+                insFrame.IsVisible = true;
+                invFrame.IsVisible = true;
+                medFrame.IsVisible = true;
+                relFrame.IsVisible = true;
+            } 
+            skillsRemain.Text = pointPool.ToString();
+             
+            //Character Backgrounds influence character proficiency
+            if (_charBg == "Acolyte")
                 {
                     insVal.IsChecked = true;
                     insVal.IsEnabled = false;
@@ -252,10 +322,10 @@ namespace Cantrip.Views
                     steFrame.IsVisible = true;
                     steVal.IsEnabled = false;
                 }
-        }
-        /*private async void Button_Clicked(object sender, EventArgs e)
+            }
+        private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CharacterCreatePage3(_charName, _charRace, _charClass, _charBg, _charLvl, _charVal, _conVal, _dexVal, _intVal, _strVal, _wisVal)); //Navigate to step 4/4 of the character creation process
-        }*/
+        }
     }
 }

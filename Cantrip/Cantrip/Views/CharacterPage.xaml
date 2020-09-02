@@ -32,10 +32,11 @@
                    Margin="0,-15,0,0"/>
                 <StackLayout Orientation="Horizontal">
                     <Image x:Name="charImg"
+                           Source="classBardLogo.png"
                            VerticalOptions="Center" 
-                           WidthRequest="150"
-                           HeightRequest="150"
-                           Margin="0,5,0,0"/>
+                           WidthRequest="148"
+                           HeightRequest="148"
+                           Margin="0,5,0,15"/>
                     <StackLayout Orientation="Vertical">
                         <Label x:Name="charNameLabel"
                            Text="Name Here"
@@ -85,7 +86,7 @@
                         <StackLayout Orientation="Vertical"
                                      HorizontalOptions="Center">
                             <Label x:Name="charBGLabel"
-                                    Text="Armor"
+                                    Text="HP"
                                     FontSize="20"
                                     TextColor="#53565D"/>
                             <Label x:Name="charBackLabel"
@@ -100,6 +101,13 @@
                            Padding="10"
                            HeightRequest="68"
                            WidthRequest="75">
+                        <StackLayout Orientation="Vertical"
+                                     HorizontalOptions="Center">
+                            <Label x:Name="charHitDice"
+                                    Text="Speed"
+                                    FontSize="20"
+                                    TextColor="#53565D"/>
+                        </StackLayout>
                     </Frame>
                 </StackLayout>
             </StackLayout>

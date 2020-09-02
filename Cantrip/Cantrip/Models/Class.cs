@@ -22,7 +22,7 @@ namespace Cantrip.Models
         public string language { get; set; }
 
         //Class Skill Proficiency
-        public bool acrobatics { get; set; }
+        /*public bool acrobatics { get; set; }
         public bool animalHandling { get; set; }
         public bool arcana { get; set; }
         public bool athletics { get; set; }
@@ -39,7 +39,7 @@ namespace Cantrip.Models
         public bool religion { get; set; }
         public bool sleightOfHand { get; set; }
         public bool stealth { get; set; }
-        public bool survival { get; set; }
+        public bool survival { get; set; }*/
 
 
         public override string ToString()

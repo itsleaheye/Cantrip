@@ -17,6 +17,7 @@ namespace Cantrip.Views
     {
         string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "myDB.db3");
         string _charName, _charRace, _charClass, _charBg, _charLvl;
+        int remainingPoints;
         public CharacterCreatePage2(string charName, string charRace, string charClass, string charBg, string charLvl)
         {
             this.Title = "Abilities";
@@ -31,7 +32,7 @@ namespace Cantrip.Views
         {
             var btn = (Button)sender;
             var btnName = btn.ClassId;
-            int remainingPoints = int.Parse(pointsRemain.Text.ToString());
+            remainingPoints = int.Parse(pointsRemain.Text.ToString());
             if (remainingPoints >= 1)
             {
                 //Charisma Increase
@@ -370,39 +371,46 @@ namespace Cantrip.Views
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //Ensure points have been filled/rolled/bought
-            if (int.Parse(pointsRemain.Text.ToString()) >= 1 && pointsRemain.Text != "3d6") //If the user has not spent all their points, and they are in the 'point rolling' mode, display an alert
+            if (remainingPoints >= 1 && pointsRemain.Text.ToString() != "3d6") //If the user has not spent all their points, and they are in the 'point rolling' mode, display an alert
             {
-                await DisplayAlert("Incomplete", "Please ensure you have spent all your points, or rolled them", "OK");
+                await DisplayAlert("Incomplete", "Please ensure you have spent or rolled all of your points", "OK");
             }
             else
             {
-                await Navigation.PushAsync(new CharacterCreatePage3(_charName, _charRace, _charClass, _charBg, _charLvl, charVal.Text.ToString(), conVal.Text.ToString(), dexVal.Text.ToString(), intVal.Text.ToString(), strVal.Text.ToString(), wisVal.Text.ToString())); //Navigate to step 3/4 of the character creation process
-            }
-            /*var db = new SQLiteConnection(dbPath); //Connect to local database 
-            db.CreateTable<Character>(); //Create new instance of a character
-            
-            var maxPK = db.Table<Character>().OrderByDescending(c => c.characterID).FirstOrDefault();
-            int _charID = (maxPK == null ? 1 : maxPK.characterID + 1);
-            
-            Character character = new Character() 
-            {
-                //Passed values
-                characterID = _charID,
-                Name = _charName,
-                classID = _charClass,
-                raceID = _charRace,
-                backgroundID = _charBg,
-                TotalLevel = _charLvl,
+                string _charVal = charVal.Text.ToString();
+                string _conVal = conVal.Text.ToString();
+                string _dexVal = dexVal.Text.ToString();
+                string _intVal = intVal.Text.ToString();
+                string _strVal = strVal.Text.ToString();
+                string _wisVal = wisVal.Text.ToString();
 
-                //New values
-                skillChar = int.Parse(charVal.Text.ToString()),
-                skillCon = int.Parse(conVal.Text.ToString()),
-                skillDex = int.Parse(dexVal.Text.ToString()),
-                skillInt = int.Parse(intVal.Text.ToString()),
-                skillStr = int.Parse(strVal.Text.ToString()),
-                skillWis = int.Parse(wisVal.Text.ToString())
-            };
-            db.Insert(character); //Insert new character table into the db*/
+                await Navigation.PushAsync(new CharacterCreatePage3(_charName, _charRace, _charClass, _charBg, _charLvl, _charVal, _conVal, _dexVal, _intVal, _strVal, _wisVal)); //Navigate to step 3/4 of the character creation process
+            }
+                /* var db = new SQLiteConnection(dbPath); //Connect to local database 
+             db.CreateTable<Character>(); //Create new instance of a character
+
+             var maxPK = db.Table<Character>().OrderByDescending(c => c.characterID).FirstOrDefault();
+             int _charID = (maxPK == null ? 1 : maxPK.characterID + 1);
+
+             Character character = new Character() 
+             {
+                 //Passed values
+                 characterID = _charID,
+                 Name = _charName,
+                 classID = _charClass,
+                 raceID = _charRace,
+                 backgroundID = _charBg,
+                 TotalLevel = "1",
+
+                 //New values
+                 skillChar = int.Parse(charVal.Text.ToString()),
+                 skillCon = int.Parse(conVal.Text.ToString()),
+                 skillDex = int.Parse(dexVal.Text.ToString()),
+                 skillInt = int.Parse(intVal.Text.ToString()),
+                 skillStr = int.Parse(strVal.Text.ToString()),
+                 skillWis = int.Parse(wisVal.Text.ToString())
+             };
+             db.Insert(character); //Insert new character table into the db*/
             
         }
     }
