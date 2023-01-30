@@ -24,11 +24,9 @@ Welcome to Cantrip! A DnD character management application. Cantrip brings a new
 * Animated splash screens
 
 # Tech Stack
-> - React Native
-> - TypeScript
-> - Firebase (security and real time database)
-
-# Libraries Used
-> - react-reanimated
-> - react-linear-gradient
-> - react-navigation/drawer
+- React Native
+  - react-reanimated
+  - react-linear-gradient
+  - react-navigation/drawer
+- TypeScript
+- Firebase (security and real time database)
