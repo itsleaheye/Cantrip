@@ -1,0 +1,21 @@
+{
+  "name": "Mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@react-native-firebase/app": "^17.3.0",
+    "@react-native-firebase/database": "^17.3.0",
+    "firebase": "^9.17.1"
+  },
+  "devDependencies": {
+    "metro": "^0.75.0",
+    "metro-core": "^0.75.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

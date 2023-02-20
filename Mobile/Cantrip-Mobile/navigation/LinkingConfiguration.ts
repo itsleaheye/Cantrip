@@ -7,30 +7,30 @@
 import { LinkingOptions } from "@react-navigation/native";
 import * as Linking from "expo-linking";
 
-import { RootStackParamList } from "../types";
+import { RootTabParamList } from "../types";
 
-const linking: LinkingOptions<RootStackParamList> = {
-  prefixes: [Linking.createURL("/")],
-  config: {
-    screens: {
-      Root: {
-        screens: {
-          HomeView: {
-            screens: {
-              HomeView: "one",
-            },
-          },
-          TabTwo: {
-            screens: {
-              TabTwoScreen: "two",
-            },
-          },
-        },
-      },
-      Modal: "modal",
-      NotFound: "*",
-    },
-  },
-};
+// const linking: LinkingOptions<RootTabParamList> = {
+//   prefixes: [Linking.createURL("/")],
+//   config: {
+//     screens: {
+//       Root: {
+//         screens: {
+//           HomeView: {
+//             screens: {
+//               HomeView: "one",
+//             },
+//           },
+//           TabTwo: {
+//             screens: {
+//               TabTwoScreen: "two",
+//             },
+//           },
+//         },
+//       },
+//       Modal: "modal",
+//       NotFound: "*",
+//     },
+//   },
+// };
 
-export default linking;
+// export default linking;
