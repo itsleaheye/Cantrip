@@ -7,7 +7,7 @@ import * as React from "react";
 import { Alert, Pressable } from "react-native";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import HomeView from "../screens/homeView";
+import HomeView from "../oldScreens/homeView";
 import {
   DrawerAppStackParams,
   RootStackScreenProps,
@@ -18,7 +18,7 @@ import {
   createDrawerNavigator,
   DrawerNavigationProp,
 } from "@react-navigation/drawer";
-import CharacterView from "../screens/CharacterView";
+import CharacterView from "../oldScreens/CharacterView";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import LinkingConfiguration from "./LinkingConfiguration";
 
