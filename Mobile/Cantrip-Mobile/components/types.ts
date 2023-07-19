@@ -16,8 +16,8 @@ export interface Race {
   id: string; //also race name
   details: string;
   languages: string[];
-  trait: string;
-  abilities: {
+  trait?: string;
+  abilities?: {
     name: string;
     description: string;
   };

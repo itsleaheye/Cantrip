@@ -6,6 +6,7 @@
   "dependencies": {
     "@react-native-firebase/app": "^17.3.0",
     "@react-native-firebase/database": "^17.3.0",
+    "@react-navigation/native-stack": "^6.9.13",
     "firebase": "^9.17.1",
     "react-native-safe-area-context": "^4.7.1",
     "react-native-screens": "^3.22.1"
