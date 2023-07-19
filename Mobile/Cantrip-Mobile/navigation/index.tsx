@@ -1,18 +1,26 @@
-import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
 
-import { FontAwesome } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import * as React from 'react';
-import { Alert, Pressable } from 'react-native';
-import Colors from '../constants/Colors';
-import useColorScheme from '../hooks/useColorScheme';
-import HomeView from '../screens/homeView';
-import { DrawerAppStackParams, RootStackScreenProps, RootTabParamList, RootTabScreenProps } from '../types';
-import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/drawer';
-import CharacterView from '../screens/CharacterView';
-import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
-import LinkingConfiguration from './LinkingConfiguration';
+import { FontAwesome } from "@expo/vector-icons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as React from "react";
+import { Alert, Pressable } from "react-native";
+import Colors from "../constants/Colors";
+import useColorScheme from "../hooks/useColorScheme";
+import HomeView from "../screens/homeView";
+import {
+  DrawerAppStackParams,
+  RootStackScreenProps,
+  RootTabParamList,
+  RootTabScreenProps,
+} from "../types";
+import {
+  createDrawerNavigator,
+  DrawerNavigationProp,
+} from "@react-navigation/drawer";
+import CharacterView from "../screens/CharacterView";
+import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
+import LinkingConfiguration from "./LinkingConfiguration";
 
 export default function Navigation() {
   return (
@@ -27,19 +35,19 @@ const Drawer = createDrawerNavigator<DrawerAppStackParams>();
 function RootNavigator() {
   return (
     <Drawer.Navigator
-        initialRouteName="HomeView"
-        screenOptions={{
-            headerShown: true,
-            // title: "My Characters",
-            headerTitleAlign: "center",
-            drawerStyle: {
-              backgroundColor: "#202328",
-            },
-        }}
-        >
-        <Drawer.Screen name="HomeView" component={HomeView}/>
-        <Drawer.Screen name="CharacterView" component={CharacterView}/>
-      </Drawer.Navigator>
+      initialRouteName="HomeView"
+      screenOptions={{
+        headerShown: true,
+        // title: "My Characters",
+        headerTitleAlign: "center",
+        drawerStyle: {
+          backgroundColor: "#202328",
+        },
+      }}
+    >
+      <Drawer.Screen name="HomeView" component={HomeView} />
+      <Drawer.Screen name="CharacterView" component={CharacterView} />
+    </Drawer.Navigator>
   );
 }
 
@@ -90,7 +98,7 @@ function RootNavigator() {
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
 function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
+  name: React.ComponentProps<typeof FontAwesome>["name"];
   color: string;
 }) {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;

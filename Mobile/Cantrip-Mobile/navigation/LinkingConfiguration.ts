@@ -9,28 +9,28 @@ import * as Linking from "expo-linking";
 
 import { RootTabParamList } from "../types";
 
-// const linking: LinkingOptions<RootTabParamList> = {
-//   prefixes: [Linking.createURL("/")],
-//   config: {
-//     screens: {
-//       Root: {
-//         screens: {
-//           HomeView: {
-//             screens: {
-//               HomeView: "one",
-//             },
-//           },
-//           TabTwo: {
-//             screens: {
-//               TabTwoScreen: "two",
-//             },
-//           },
-//         },
-//       },
-//       Modal: "modal",
-//       NotFound: "*",
-//     },
-//   },
-// };
+const linking: LinkingOptions<RootTabParamList> = {
+  prefixes: [Linking.createURL("/")],
+  config: {
+    screens: {
+      Root: {
+        screens: {
+          HomeView: {
+            screens: {
+              HomeView: "one",
+            },
+          },
+          TabTwo: {
+            screens: {
+              TabTwoScreen: "two",
+            },
+          },
+        },
+      },
+      Modal: "modal",
+      NotFound: "*",
+    },
+  },
+};
 
-// export default linking;
+export default linking;
