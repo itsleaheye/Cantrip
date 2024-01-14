@@ -35,15 +35,18 @@ function CharacterSelectView({ navigation }: { navigation: any }) {
     background: {
       id: "backgroundName",
       details: "Background details",
-      languages: ["english", "other languages"],
+      languageExtraSlots: 0,
     },
     class: [],
     equippedWeapons: [],
     hitDice: 0,
     hitPoints: 0,
     initiative: 0,
-    inventory: [],
-    languages: [],
+    inventory: undefined,
+    languages: {
+      known: ["Common"],
+      slots: 1,
+    },
     totalLevel: 1,
     proficiencyBonus: 0,
     proficiencies: {
@@ -54,7 +57,7 @@ function CharacterSelectView({ navigation }: { navigation: any }) {
     race: {
       id: "raceName",
       details: "Race details",
-      languages: ["english", "other languages"],
+      languages: ["Common", "other languages"],
     },
     speed: 0,
     spellAttack: 0,

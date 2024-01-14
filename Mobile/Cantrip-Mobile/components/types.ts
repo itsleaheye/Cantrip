@@ -1,6 +1,6 @@
 import { Image } from "react-native";
 
-export interface Class {
+export interface ClassDetails {
   id: string; //also class name
   details: string;
   level: number;
@@ -34,6 +34,7 @@ export interface Item {
 }
 
 export interface Weapon extends Item {
+  id: string;
   type: "Melee" | "Ranged" | "Bludgeoning" | "Piercing" | "Slashing"; //[!] Reference Books
   damage: number;
   range: number;
@@ -51,7 +52,6 @@ export interface Spell {
 }
 
 export interface Inventory {
-  id: string; //also class name
   currentWeight: number; //summary of all items.weight
   items: Item[];
   maxWeight: number;
@@ -60,7 +60,12 @@ export interface Inventory {
 export interface Background {
   id: string; //also background name
   details: string;
-  languages: string[];
+  languageExtraSlots?: number;
+}
+
+export interface Languages {
+  slots: number; //default to 1 (Common), some races/classes give extra language slots
+  known: string[];
 }
 
 export interface Character {
@@ -69,13 +74,13 @@ export interface Character {
   avatar?: Image; //If null, default to class Avatar
   armorClass: "Light" | "Medium" | "Heavy" | "Shield";
   background: Background;
-  class: Class[];
+  class: ClassDetails[];
   equippedWeapons: Weapon[];
   hitDice: number;
   hitPoints: number;
   initiative: number;
-  inventory: Inventory[];
-  languages: string[]; //Cumulative of Class[].languages & Race[].languages & Background.languages
+  inventory?: Inventory;
+  languages: Languages;
   totalLevel: number; //Sum of Class[] levels
   name: string;
   proficiencyBonus: number;
