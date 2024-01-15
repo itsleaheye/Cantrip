@@ -53,4 +53,24 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
   },
+  grayBanner: {
+    backgroundColor: "#2A2E37",
+    width: "100%",
+  },
+  abilityRow: {
+    marginBottom: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+  abilityModifier: {
+    flexDirection: "row",
+    width: "20%",
+  },
+  stepper: {
+    borderRadius: 8,
+    backgroundColor: "#53565D",
+    color: 202328,
+  },
 });

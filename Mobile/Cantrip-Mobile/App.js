@@ -1,6 +1,5 @@
 import useCachedResources from "./hooks/useCachedResources";
 import { Platform } from "react-native";
-import * as SQLite from "expo-sqlite";
 // import Navigation from "./navigation";
 import { CharacterSelectView } from "./views/CharacterSelectView";
 
@@ -20,15 +19,11 @@ export default function App() {
           <Stack.Screen name="Cantrip is Loading" component={SplashView} />
           <Stack.Screen
             name="Character Select"
-            component={CharacterSelectView}
+            component={CharacterSelectView(characterList)}
           />
           <Stack.Screen name="My Character" component={CharacterView} />
         </Stack.Navigator>
       </NavigationContainer>
     );
   }
-}
-
-export function openDatabase() {
-  return SQLite.openDatabase("cantrip.db");
 }

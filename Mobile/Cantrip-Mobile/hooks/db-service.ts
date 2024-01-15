@@ -1,15 +1,20 @@
-// https://blog.logrocket.com/using-sqlite-with-react-native/
-import { openDatabase } from "/react-native-sqlite-storage";
+// // https://blog.logrocket.com/using-sqlite-with-react-native/
+//https://docs.expo.dev/versions/latest/sdk/sqlite/ | Android Expo SQLite
+import { enablePromise, openDatabase } from "react-native-sqlite-storage";
 
-export const getDBConnection = async () => {
-  return openDatabase({ name: "cantrip.db", location: "default" });
+enablePromise(true);
+
+export const connectToDatabase = async () => {
+  return openDatabase(
+    { name: "cantrip.db", location: "default" },
+    () => {},
+    (error) => {
+      console.error(error);
+      throw Error("Could not connect to database");
+    }
+  );
 };
 
-export const createTable = async (db: SQLiteDatabase) => {
-  // create table if not exists
-  const query = `CREATE TABLE IF NOT EXISTS ${character}(
-        value TEXT NOT NULL
-    );`;
-
-  await db.executeSql(query);
-};
+// export const createCharacterTable =
+//   "create table if not exists Characters (id INTEGER PRIMARY KEY AUTOINCREMENT, armor INTEGER, avatar TEXT, phoneNumber text);";
+//https://docs.expo.dev/versions/latest/sdk/sqlite/ | Android Expo SQLite

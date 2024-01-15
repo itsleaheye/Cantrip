@@ -103,3 +103,7 @@ export interface Character {
     charisma: number;
   };
 }
+
+export interface CharacterList {
+  characters: Character[];
+}
