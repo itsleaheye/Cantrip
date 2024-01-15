@@ -16,109 +16,22 @@ function SplashView() {
   );
 }
 
-function CharacterView({ navigation, route }: { navigation: any; route: any }) {
-  const { character } = route.params; //Type cast
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={styles.cardTitle}>{character.name || "Character Name"}</Text>
-    </View>
-  );
-}
+// const Stack = createNativeStackNavigator();
 
-function CharacterSelectView({ navigation }: { navigation: any }) {
-  // Placeholder for localStorage character list
-  const newCharacter: Character = {
-    id: "0",
-    name: "Test Character Name",
-    armor: 0,
-    armorClass: "Light",
-    background: {
-      id: "backgroundName",
-      details: "Background details",
-      languageExtraSlots: 0,
-    },
-    class: [],
-    equippedWeapons: [],
-    hitDice: 0,
-    hitPoints: 0,
-    initiative: 0,
-    inventory: undefined,
-    languages: {
-      known: ["Common"],
-      slots: 1,
-    },
-    totalLevel: 1,
-    proficiencyBonus: 0,
-    proficiencies: {
-      armor: [],
-      weapons: [],
-      tools: [],
-    },
-    race: {
-      id: "raceName",
-      details: "Race details",
-      languages: ["Common", "other languages"],
-    },
-    speed: 0,
-    spellAttack: 0,
-    spellDC: 0,
-    spells: [],
-    stats: {
-      strength: 0,
-      constitution: 0,
-      dexterity: 0,
-      intelligence: 0,
-      wisdom: 0,
-      charisma: 0,
-    },
-  };
+// function App() {
+//   return (
+//     <NavigationContainer>
+//       {/* To Do: Loading Screen overlay of animated logo */}
+//       <Stack.Navigator initialRouteName="Home">
+//         <Stack.Screen name="Cantrip is Loading" component={SplashView} />
+//         <Stack.Screen name="Character Select" component={CharacterSelectView} />
+//         <Stack.Screen name="My Character" component={CharacterView} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
 
-  // To Do: Add local storage, and load characters. If no characters, show new character button and do NOT display the flatList
-  return (
-    newCharacter && (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <FlatList
-          data={[newCharacter]}
-          keyExtractor={(character) => character.id}
-          renderItem={({ item }) => (
-            <CharacterListCard name={item.name} id={item.id} />
-          )}
-        />
-
-        <Pressable
-          style={styles.primaryButton}
-          onPress={() => Alert.alert("New Character pressed")}
-        >
-          <LinearGradient
-            colors={["#22c1c3", "#4d9ece"]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-            style={styles.primaryButton}
-          >
-            <Text style={styles.primaryButtonText}>New Character</Text>
-          </LinearGradient>
-        </Pressable>
-      </View>
-    )
-  );
-}
-
-const Stack = createNativeStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      {/* To Do: Loading Screen overlay of animated logo */}
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Cantrip is Loading" component={SplashView} />
-        <Stack.Screen name="Character Select" component={CharacterSelectView} />
-        <Stack.Screen name="My Character" component={CharacterView} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-export default App;
+// export default App;
 
 // import "react-native-gesture-handler";
 
