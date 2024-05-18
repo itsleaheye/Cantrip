@@ -16,15 +16,31 @@ import { skillsCreateQuery } from "./queries/skillsQuery";
 // Enable promise for SQLite
 enablePromise(true);
 
-export const connectToDatabase = async () => {
-  return openDatabase(
-    { name: "cantrip.db", location: "default" },
-    () => {},
-    (error: any) => {
-      console.error(error);
-      throw Error("Could not connect to database");
+export const initializeDatabase = async () => {
+  try {
+    const db = await connectToDatabase();
+    if (db) {
+      console.log("Database connected successfully");
     }
-  );
+  } catch (error) {
+    console.error("Failed to connect to the database:", error);
+  }
+};
+
+export const connectToDatabase = async () => {
+  return new Promise((resolve, reject) => {
+    const db = openDatabase(
+      { name: "cantrip.db", location: "default" },
+      () => {
+        // Database opened or created successfully
+        resolve(db);
+      },
+      (error: any) => {
+        console.error(error);
+        reject(new Error("Could not connect to database"));
+      }
+    );
+  });
 };
 
 export const createTables = async (db: SQLiteDatabase) => {

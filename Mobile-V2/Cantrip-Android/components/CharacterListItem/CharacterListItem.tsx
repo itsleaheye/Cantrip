@@ -36,9 +36,9 @@ export default function CharacterListItem({
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    alignItems: "flex-start",
+    alignItems: "center",
     flexDirection: "row",
-    padding: 16,
+    padding: 10,
     backgroundColor: "#2A2E37",
     borderRadius: 8,
     marginTop: 16,
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
   avatarContainer: {
     borderRadius: 100,
     backgroundColor: "#202328",
-    height: 50,
-    width: 50,
+    height: 60,
+    width: 60,
     overflow: "hidden",
     marginRight: 16,
   },
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   row: {
     paddingRight: 16,
-    width: "90%",
+    width: "88%",
     flexDirection: "row",
     justifyContent: "space-between",
   },

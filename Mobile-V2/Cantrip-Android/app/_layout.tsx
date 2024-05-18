@@ -8,7 +8,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback, useEffect } from "react";
 import "react-native-reanimated";
-import { connectToDatabase, createTables } from "./db/db";
+import { connectToDatabase, createTables, initializeDatabase } from "./db/db";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import CharacterList from "./views/CharacterList";
 
@@ -21,10 +21,16 @@ export default function RootLayout() {
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
   // Fetch data from the database
+  initializeDatabase();
   // const loadData = useCallback(async () => {
   //   try {
   //     const db = await connectToDatabase();
-  //     await createTables(db);
+  //     console.log(db);
+  //     if (db !== null) {
+  //       await createTables(db);
+  //     } else {
+  //       console.error("Failed to connect to database");
+  //     }
   //   } catch (error) {
   //     console.error(error);
   //   }
