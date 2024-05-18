@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export interface CharacterListItemProps {
   name: string;
@@ -16,22 +16,20 @@ export default function CharacterListItem({
   return (
     // To do: Add a click event to navigate to the character sheet
     // To do: Add a long press event to delete the character. Confirm with a modal
-    <div style={styles.container}>
-      <div style={styles.avatarContainer}>
+    <View style={styles.container}>
+      <View style={styles.avatarContainer}>
         {/* To do: V1 will be static and have avatars displaying the characters initial class. Custom avatar uploading will be considered later */}
-      </div>
-      <div style={styles.details}>
-        <div style={styles.header}>
-          <h4>{name}</h4>
-        </div>
-        <div style={styles.subtle}>
-          {/* To do: If multiple classes chose phrase it as i.e. "Wizard Cleric" with truncation if too many classes provided */}
-          <p>{characterClass}</p>
+      </View>
+      <View style={styles.details}>
+        <Text style={styles.header}>{name}</Text>
+        {/* To do: If multiple classes chose phrase it as i.e. "Wizard Cleric" with truncation if too many classes provided */}
+        <View style={styles.row}>
+          <Text style={styles.subtle}>{characterClass}</Text>
           {/* To do: This is a sum of all class levels */}
-          <p>Lvl {level || 1}</p>
-        </div>
-      </div>
-    </div>
+          <Text style={styles.subtle}>Lvl {level || 1}</Text>
+        </View>
+      </View>
+    </View>
   );
 }
 
@@ -40,10 +38,12 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "flex-start",
     flexDirection: "row",
-    justifyContent: "space-between",
-    padding: 8,
-    backgroundColor: "#2a2e37",
+    padding: 16,
+    backgroundColor: "#2A2E37",
     borderRadius: 8,
+    marginTop: 16,
+    width: "100%",
+    overflow: "hidden",
   },
   avatarContainer: {
     borderRadius: 100,
@@ -51,15 +51,25 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     overflow: "hidden",
+    marginRight: 16,
   },
   details: {
-    flexDirection: "column",
+    left: 0,
   },
   header: {
+    fontSize: 16,
     fontWeight: "bold",
     color: "#fff",
+    marginBottom: 4,
   },
   subtle: {
-    color: "82868E",
+    fontSize: 16,
+    color: "#82868E",
+  },
+  row: {
+    paddingRight: 16,
+    width: "90%",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });

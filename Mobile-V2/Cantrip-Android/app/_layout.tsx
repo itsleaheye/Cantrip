@@ -6,19 +6,29 @@ import {
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import "react-native-reanimated";
-// import { useColorScheme } from "@/hooks/useColorScheme";
+import { connectToDatabase, createTables } from "./db/db";
+import { useColorScheme } from "@/hooks/useColorScheme";
+import CharacterList from "./views/CharacterList";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  // const colorScheme = useColorScheme();
-  const colorScheme = "dark";
+  const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
+  // Fetch data from the database
+  // const loadData = useCallback(async () => {
+  //   try {
+  //     const db = await connectToDatabase();
+  //     await createTables(db);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (loaded) {
@@ -34,12 +44,14 @@ export default function RootLayout() {
   // To do: Persistant layouts across all screens
   // Settings will always be top: 0, left: 0
   // Each 'view' should pass in the current route, and a header label (~bold, #fff, h2)
+
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <CharacterList />
+      {/* <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: true }} />
         <Stack.Screen name="+not-found" />
-      </Stack>
+      </Stack> */}
     </ThemeProvider>
   );
 }

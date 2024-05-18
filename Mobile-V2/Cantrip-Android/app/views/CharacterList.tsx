@@ -1,6 +1,6 @@
 import CharacterListItem from "@/components/CharacterListItem/CharacterListItem";
 import React from "react";
-import { Button, StyleSheet } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
 
 const placeHolderCharacters = [
   {
@@ -31,8 +31,8 @@ export default function CharacterList() {
   // To do: Create a hook to fetch existing characters from a SQLite database
   const characters = placeHolderCharacters;
   return (
-    <div style={styles.container}>
-      <div style={styles.list}>
+    <View style={styles.container}>
+      <View style={styles.list}>
         {characters.length >= 0 ? (
           // To do: Add these cards inside a lazy load scroll view
           characters.map((character: characterDetails) => {
@@ -50,13 +50,13 @@ export default function CharacterList() {
             character below
           </p>
         )}
-      </div>
-      <div style={styles.footer}>
+      </View>
+      <View style={styles.footer}>
         <Button title="New Character" onPress={() => {}} />
         {/* To do: Add button click event to navigate to "/newcharacter" */}
         {/* To Do: Add button LinearGradient styling */}
-      </div>
-    </div>
+      </View>
+    </View>
   );
 }
 
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     padding: 16,
-    backgroundColor: "#2A2E37",
+    backgroundColor: "#202328",
+    paddingTop: 50,
   },
   list: {
     height: "90%",
@@ -78,5 +79,6 @@ const styles = StyleSheet.create({
     height: "10%",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
   },
 });
