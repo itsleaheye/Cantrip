@@ -1,63 +1,77 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
-import { useFonts } from "expo-font";
+import { placeHolderCharacters } from "@/components/CharacterList";
 import { Stack } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import { useCallback, useEffect } from "react";
-import "react-native-reanimated";
-import { connectToDatabase, createTables, initializeDatabase } from "./db/db";
-import { useColorScheme } from "@/hooks/useColorScheme";
-import CharacterList from "./views/CharacterList";
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import { useState, useEffect } from "react";
+import { View, Text } from "react-native";
+import SQLite from "react-native-sqlite-storage";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-  });
-  // Fetch data from the database
-  initializeDatabase();
-  // const loadData = useCallback(async () => {
-  //   try {
-  //     const db = await connectToDatabase();
-  //     console.log(db);
-  //     if (db !== null) {
-  //       await createTables(db);
-  //     } else {
-  //       console.error("Failed to connect to database");
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }, []);
+  const db = SQLite.openDatabase(
+    {
+      name: "cantrip-android.db",
+      location: "default",
+    },
+    () => {},
+    (error) => console.log("Error", error)
+  );
+  const placeholder = placeHolderCharacters;
+  const [isLoading, setIsLoading] = useState(true);
+  const [characters, setCharacters] = useState([placeholder]);
+
+  const createTable = () => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        "CREATE TABLE IF NOT EXISTS characters (id INTEGER PRIMARY KEY, name TEXT, characterClass TEXT, level TEXT);"
+      );
+    });
+  };
+
+  const setData = async () => {
+    try {
+      await db.transaction(async (tx) => {
+        await tx.executeSql(
+          "INSERT INTO characters (name, characterClass, level) VALUES (?,?,?)",
+          ["Grog", "Barbarian", "20"]
+        );
+      });
+    } catch (error) {
+      console.log("Error", error);
+    }
+  };
+
+  const getData = async () => {
+    try {
+      db.transaction(async (tx) => {
+        tx.executeSql("SELECT * FROM characters", [], (tx, results) => {
+          const rows = results.rows;
+          for (let i = 0; i < rows.length; i++) {
+            setCharacters;
+            console.log(rows.item(i));
+          }
+        });
+      });
+    } catch (error) {
+      console.log("Error", error);
+    }
+  };
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
+    createTable();
+    setData();
+    getData();
+    setIsLoading(false);
+  }, []);
 
-  if (!loaded) {
-    // To do: Add loading animated logo of burning book and dice
-    return null;
+  if (isLoading) {
+    return (
+      <View>
+        <Text>Loading characters...</Text>
+      </View>
+    );
+  } else {
+    return (
+      <Stack>
+        <Stack.Screen name="index" />
+      </Stack>
+    );
   }
-
-  // To do: Persistant layouts across all screens
-  // Settings will always be top: 0, left: 0
-  // Each 'view' should pass in the current route, and a header label (~bold, #fff, h2)
-
-  return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <CharacterList />
-      {/* <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: true }} />
-        <Stack.Screen name="+not-found" />
-      </Stack> */}
-    </ThemeProvider>
-  );
 }

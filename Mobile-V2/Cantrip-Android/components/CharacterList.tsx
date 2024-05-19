@@ -10,7 +10,7 @@ import {
   View,
 } from "react-native";
 
-const placeHolderCharacters = [
+export const placeHolderCharacters = [
   {
     name: "Lyra Quakestrider",
     characterClass: "Warrior",
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     padding: 16,
-    paddingTop: 75,
+    paddingTop: 0,
   },
   list: {
     height: "90%",
