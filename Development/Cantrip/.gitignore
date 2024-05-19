@@ -1,37 +1,37 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
-node_modules/
+# # dependencies
+# node_modules/
 
-# Expo
-.expo/
-dist/
-web-build/
+# # Expo
+# .expo/
+# dist/
+# web-build/
 
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# # Native
+# *.orig.*
+# *.jks
+# *.p8
+# *.p12
+# *.key
+# *.mobileprovision
 
-# Metro
-.metro-health-check*
+# # Metro
+# .metro-health-check*
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# # debug
+# npm-debug.*
+# yarn-debug.*
+# yarn-error.*
 
-# macOS
-.DS_Store
-*.pem
+# # macOS
+# .DS_Store
+# *.pem
 
-# local env files
-.env*.local
+# # local env files
+# .env*.local
 
-# typescript
-*.tsbuildinfo
+# # typescript
+# *.tsbuildinfo
 
-*-lock.json
+# *-lock.json
