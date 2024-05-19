@@ -2,7 +2,8 @@ import * as SQLite from "expo-sqlite";
 import React from "react";
 
 export function App() {
-  const db = SQLite.openDatabase("cantrip.db");
+  const db = SQLite.openDatabaseSync("cantrip.db");
+  db.withTransactionSync;
   return (
     <div>
       <h1>Cantrip</h1>
