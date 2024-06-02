@@ -6,7 +6,7 @@
 
 # Cantrip
 
-Welcome to Cantrip! A DnD character management application. Cantrip brings a new and vibrant way to manage your RPG characters, their inventory, and their combat abilities. This application is being built and designed by full stack developer Leah Nonay.
+Welcome to Cantrip! A DnD character management application. Cantrip brings a new and vibrant way to manage your RPG characters, their inventory, and their combat abilities. This application is being built and designed by full stack developer Leah Eyestone.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/61296534/150652106-6259092e-d7ff-4ed5-88db-8eb92200ed26.jpg" width="420"/>
