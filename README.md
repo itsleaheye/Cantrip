@@ -29,5 +29,5 @@ Welcome to Cantrip! A DnD character management application. Cantrip brings a new
   - react-linear-gradient
   - react-navigation/drawer
 - TypeScript
-- Firebase (authentication and real time database) - References [x](https://firebase.google.com/docs/web/setup#register-app) | [x](https://docs.expo.dev/guides/using-firebase/) [x](https://facebook.github.io/metro/docs/getting-started/)
-- Metro
+- Expo
+- SQLite
