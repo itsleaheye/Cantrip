@@ -1,0 +1,83 @@
+.App {
+    text-align: center;
+    background-color: #202328;
+    min-height: 100vh;
+    padding: 4rem;
+}
+.home-logo {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+/*Button Styling*/
+button {
+    background-color: #42C9C5;
+    color: #202328;
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    margin: 2rem auto;
+    width: 50%;
+    display: block;
+}
+button:hover {
+    background-color: #5A5387;
+    color: #f4f4f4;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+button p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*Form Styling*/
+.newCharacterForm {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 4rem 4rem 4rem;
+    font-size: 16px;
+    color: #f4f4f4;
+}
+.newCharacterForm h1,
+.hr-bar h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+input,
+select,
+label {
+    width: 60%;
+    margin-left: 20%;
+    background-color: #202328;
+    border: none;
+    font-weight: 600;
+    display: block;
+  }
+label {
+    margin-top: 1rem;
+  }
+  
+input,
+select {
+    margin-top: 0.5rem;
+    border-bottom: 1px solid #53565D;
+    color: 53565D;
+    font-weight: 500;
+    color: #f4f4f4;
+  }
+.hr-bar {
+    background-color: #2A2E37;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.hr-bar p {
+    color: #53565D;
+    font-weight: 600;
+}

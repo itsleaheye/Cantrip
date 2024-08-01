@@ -1,0 +1,27 @@
+{
+  "name": "Mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@react-native-firebase/app": "^17.3.0",
+    "@react-native-firebase/database": "^17.3.0",
+    "@react-navigation/native-stack": "^6.9.13",
+    "expo-sqlite": "^11.6.0",
+    "firebase": "^9.17.1",
+    "react-native-safe-area-context": "^4.7.1",
+    "react-native-screens": "^3.22.1",
+    "react-native-sqlite-storage": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/react-native-sqlite-storage": "^6.0.5",
+    "metro": "^0.75.0",
+    "metro-core": "^0.75.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
